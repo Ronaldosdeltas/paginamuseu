@@ -1,7 +1,7 @@
 export function Home() {
   return (
     <div>
-      <h1>Pagina Museu</h1>
+      <img src="/src/assets/images/Homefirstimg.png" alt="imagem de capa" className="w-full h-auto" />
       </div>
   )
 }

@@ -48,8 +48,11 @@ export function Header() {
   return (
     <header className="bg-gray-900 w-full py-6 flex items-center justify-between px-5 relative z-50">
       <div className="flex items-center space-x-6">
-        <Link to="/" className="text-amber-50 text-2xl font-bold hover:text-amber-300">
-          Museu das Culturas Indígenas
+        <Link to="/" className="text-amber-50 text-2xl font-bold hover:text-amber-300 flex items-center">
+          <img src="/src/assets/images/Brasao_itarema.png" 
+          alt="Brasão de Itarema" 
+          className="mr-4 w-10 h-10 object-contain"/>
+          Itarema Cultura
         </Link>
         <nav className="flex space-x-6">
           <div className="relative" ref={acervoRef}>
@@ -57,7 +60,7 @@ export function Header() {
               onClick={toggleAcervo}
               className="text-amber-50 text-lg font-semibold hover:text-amber-300 focus:outline-none flex items-center"
             >
-              Acervo
+              Museu
               {isAcervoOpen ? <AiOutlineDown className="ml-1 text-lg" /> : < AiOutlineRight className="ml-1 text-lg" />}
             </button>
             {isAcervoOpen && (
@@ -70,7 +73,7 @@ export function Header() {
                   Pesquisa e Referência
                 </Link>
                 <Link
-                  to="/acervo/online"
+                  to="/acervoonline"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsAcervoOpen(false)}
                 >
@@ -97,21 +100,21 @@ export function Header() {
             {isCulturaOpen && (
               <div className="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-10">
                 <Link
-                  to="/cultura/historia"
+                  to="/culturaindigena"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsCulturaOpen(false)}
                 >
                   História Indígena
                 </Link>
                 <Link
-                  to="/cultura/tradicoes"
+                  to="/tradicao"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsCulturaOpen(false)}
                 >
                   Tradições
                 </Link>
                 <Link
-                  to="/cultura/arte"
+                  to="/arteindigena"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsCulturaOpen(false)}
                 >

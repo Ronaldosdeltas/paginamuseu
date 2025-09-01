@@ -3,9 +3,10 @@ import { createBrowserRouter } from "react-router-dom";
 import { Home } from "./home";
 import { Layout } from "./components/layout/layout";
 import { CulturaIndigena } from "./culturaIndígena";
-import { Programacao } from "./programação";
-import { Visite } from "./visite";
+import { Acervooline } from "./programação";
+import { Arteindigena } from "./arteindigena";
 import { Acervo } from "./acervo";
+import { Tradicao } from "./tradição";
 
 const router = createBrowserRouter([
 
@@ -21,17 +22,21 @@ const router = createBrowserRouter([
         element: <CulturaIndigena />
       },
       {
-        path: "/programacao",
-        element: <Programacao />
+        path: "/acervoonline",
+        element: <Acervooline/>
       },
       {
-        path: "/visite",
-        element: <Visite />
+        path: "/arteindigena",
+        element: <Arteindigena />
       
       },
       {
         path: "/acervo",
         element: <Acervo />
+      },
+      {
+      path: "/tradicao",
+      element: <Tradicao />
       }
     
     ]

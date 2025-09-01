@@ -1,4 +1,4 @@
-export function Visite() {
+export function Arteindigena() {
   return (
     <div>
       <h1>Visite</h1>
