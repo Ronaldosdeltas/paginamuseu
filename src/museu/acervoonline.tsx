@@ -1,7 +1,7 @@
 export function Acervooline() {
   return (
     <div>
-      <h1>Programção</h1>
+      <h1>Acervo</h1>
       </div>
     )
 }

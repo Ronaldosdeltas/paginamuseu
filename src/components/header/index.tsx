@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { AiOutlineRight, AiOutlineDown, AiOutlineMenu } from "react-icons/ai";
-
+import Brasaoitarema from '../../assets/images/Brasaoitarema.png'
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAcervoOpen, setIsAcervoOpen] = useState(false);
@@ -17,11 +17,11 @@ export function Header() {
   const apoieRef = useRef<HTMLDivElement>(null);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-  const toggleAcervo = () => setIsAcervoOpen(!isAcervoOpen);
-  const toggleCultura = () => setIsCulturaOpen(!isCulturaOpen);
-  const toggleExposicoes = () => setIsExposicoesOpen(!isExposicoesOpen);
-  const toggleVisite = () => setIsVisiteOpen(!isVisiteOpen);
-  const toggleApoie = () => setIsApoieOpen(!isApoieOpen);
+  const toggleAcervo = () => setIsAcervoOpen(isAcervoOpen);
+  const toggleCultura = () => setIsCulturaOpen(isCulturaOpen);
+  const toggleExposicoes = () => setIsExposicoesOpen(isExposicoesOpen);
+  const toggleVisite = () => setIsVisiteOpen(isVisiteOpen);
+  const toggleApoie = () => setIsApoieOpen(isApoieOpen);
 
   const navigate = useNavigate();
 
@@ -68,11 +68,10 @@ export function Header() {
       <div className="flex items-center justify-between">
         {/* Logo e Título à esquerda */}
         <Link to="/" className="text-amber-50 text-2xl font-bold hover:text-amber-300 flex items-center">
-          <img src="/src/assets/images/Brasao_itarema.png" alt="Brasão de Itarema" className="mr-4 w-10 h-10 object-contain" />
-          Itarema Cultura
+    <img src={Brasaoitarema} alt="Brasão de Itarema" className="mr-4 w-10 h-10 object-contain" /> Itarema Cultura
         </Link>
 
-        {/* Ícone de hambúrguer à direita */}
+        {/* Ícone de barra à direita */}
         <button onClick={toggleMobileMenu} className="text-amber-50 text-2xl md:hidden">
           <AiOutlineMenu />
         </button>
@@ -96,23 +95,23 @@ export function Header() {
                   Museu
                   {isAcervoOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
                 </button>
-                {isAcervoOpen && (
+                {!isAcervoOpen && (
                   <div className="mt-2 space-y-2">
                    <button
                 className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
-                onClick={() => handleMobileNav("/acervo/pesquisa")}
+                onClick={() => handleMobileNav("/museu/pesquisaref")}
               >
                 Pesquisa e Referência
               </button>
                     <button
                 className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
-                onClick={() => handleMobileNav("/acervoonline")}
+                onClick={() => handleMobileNav("/museu/acervoonline")}
               >
                 Acervo Online
               </button>
                     <button
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => handleMobileNav("/acervoonline")}                    >
+                      onClick={() => handleMobileNav("/museu/boletins")}                    >
                       Boletins do Acervo
                     </button>
                   </div>
@@ -126,24 +125,24 @@ export function Header() {
                   Cultura Indígena
                   {isCulturaOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
                 </button>
-                {isCulturaOpen && (
+                {!isCulturaOpen && (
                   <div className="mt-2 space-y-2">
                     <button
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => handleMobileNav("/culturaindigena")}
+                      onClick={() => handleMobileNav("/culturaindigena/historiaindigena")}
                     >
                       História Indígena
                     </button>
                     <button
                       
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => handleMobileNav("/tradicao")}
+                      onClick={() => handleMobileNav("culturaindigena/tradicao")}
                     >
                       Tradições
                     </button>
                     <button
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => handleMobileNav("/arteindigena")}
+                      onClick={() => handleMobileNav("culturaindigena/arteindigena")}
                     >
                       Arte Indígena
                     </button>
@@ -156,99 +155,123 @@ export function Header() {
                   className="text-amber-50 text-lg font-semibold hover:text-amber-300 focus:outline-none flex items-center"
                 >
                  Programação
-                  {isExposicoesOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
-                </button>
-                {isExposicoesOpen && (
-                  <div className="mt-2 space-y-2">
-                    <Link
-                      to="/exposicoes/atual"
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Exposição Atual
-                    </Link>
-                    <Link
-                      to="/exposicoes/passadas"
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Exposições Passadas
-                    </Link>
-                    <Link
-                      to="/exposicoes/eventos"
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Eventos Futuros
-                    </Link>
-                  </div>
-                )}
-              </div>
-              <div className="relative" ref={visiteRef}>
-                <button
-                  onClick={toggleVisite}
-                  className="text-amber-50 text-lg font-semibold hover:text-amber-300 focus:outline-none flex items-center"
-                >
-                  Visite
-                  {isVisiteOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
-                </button>
-                {isVisiteOpen && (
-                  <div className="mt-2 space-y-2">
-                    <Link
-                      to="/visite/horarios"
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Horários
-                    </Link>
-                    <Link
-                      to="/visite/localizacao"
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Localização
-                    </Link>
-                    <Link
-                      to="/visite/tickets"
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Compra de Tickets
-                    </Link>
-                  </div>
-                )}
-              </div>
-              <div className="relative" ref={apoieRef}>
-                <button
-                  onClick={toggleApoie}
-                  className="text-amber-50 text-lg font-semibold hover:text-amber-300 focus:outline-none flex items-center"
-                >
-                  Apoie
-                  {isApoieOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
-                </button>
-                {isApoieOpen && (
-                  <div className="mt-2 space-y-2">
-                    <Link
-                      to="/apoie/doacao"
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Faça uma Doação
-                    </Link>
-                    <Link
-                      to="/apoie/parcerias"
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Parcerias
-                    </Link>
-                    <Link
-                      to="/apoie/voluntariado"
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Voluntariado
-                    </Link>
+          {isExposicoesOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
+        </button>
+        {!isExposicoesOpen && (
+          <div className="mt-2 space-y-2">
+            <button
+             className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
+             onClick={() => handleMobileNav("/programacao/atual")}
+
+            >
+              Exposição Atual
+            </button>
+            <button
+              className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Navegando para /exposicoes/passadas");
+                handleMobileNav("/exposicoes/passadas");
+              }}
+            >
+              Exposições Passadas
+            </button>
+            <button
+              className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Navegando para /exposicoes/eventos");
+                handleMobileNav("/exposicoes/eventos");
+              }}
+            >
+              Eventos Futuros
+            </button>
+          </div>
+        )}
+      </div>
+      <div className="relative" ref={visiteRef}>
+        <button
+          onClick={toggleVisite}
+          className="text-amber-50 text-lg font-semibold hover:text-amber-300 focus:outline-none flex items-center"
+        >
+          Visite
+          {isVisiteOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
+        </button>
+        {!isVisiteOpen && (
+          <div className="mt-2 space-y-2">
+            <button
+              className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Navegando para /visite/horarios");
+                handleMobileNav("/visite/horarios");
+              }}
+            >
+              Horários
+            </button>
+            <button
+              className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Navegando para /visite/localizacao");
+                handleMobileNav("/visite/localizacao");
+              }}
+            >
+              Localização
+            </button>
+            <button
+              className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Navegando para /visite/tickets");
+                handleMobileNav("/visite/tickets");
+              }}
+            >
+              Compra de Tickets
+            </button>
+          </div>
+        )}
+      </div>
+      <div className="relative" ref={apoieRef}>
+        <button
+          onClick={toggleApoie}
+          className="text-amber-50 text-lg font-semibold hover:text-amber-300 focus:outline-none flex items-center"
+        >
+          Apoie
+          {isApoieOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
+        </button>
+        {!isApoieOpen && (
+          <div className="mt-2 space-y-2">
+            <button
+              className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Navegando para /apoie/doacao");
+                handleMobileNav("/apoie/doacao");
+              }}
+            >
+              Faça uma Doação
+            </button>
+            <button
+              className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Navegando para /apoie/parcerias");
+                handleMobileNav("/apoie/parcerias");
+              }}
+            >
+              Parcerias
+            </button>
+            <button
+              className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Navegando para /apoie/voluntariado");
+                handleMobileNav("/apoie/voluntariado");
+              }}
+            >
+              Voluntariado
+            </button>
                   </div>
                 )}
               </div>
@@ -303,21 +326,21 @@ export function Header() {
             {isCulturaOpen && (
               <div className="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-10">
                 <Link
-                  to="/culturaindigena"
+                  to="/culturaindigena/historiaindigena"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsCulturaOpen(false)}
                 >
                   História Indígena
                 </Link>
                 <Link
-                  to="/tradicao"
+                  to="/culturaindigena/tradicao"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsCulturaOpen(false)}
                 >
                   Tradições
                 </Link>
                 <Link
-                  to="/arteindigena"
+                  to="/culturaindigena/arteindigena"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsCulturaOpen(false)}
                 >
