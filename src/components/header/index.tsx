@@ -17,11 +17,11 @@ export function Header() {
   const apoieRef = useRef<HTMLDivElement>(null);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-  const toggleAcervo = () => setIsAcervoOpen(isAcervoOpen);
-  const toggleCultura = () => setIsCulturaOpen(isCulturaOpen);
-  const toggleExposicoes = () => setIsExposicoesOpen(isExposicoesOpen);
-  const toggleVisite = () => setIsVisiteOpen(isVisiteOpen);
-  const toggleApoie = () => setIsApoieOpen(isApoieOpen);
+  const toggleAcervo = () => setIsAcervoOpen(!isAcervoOpen);
+  const toggleCultura = () => setIsCulturaOpen(!isCulturaOpen);
+  const toggleExposicoes = () => setIsExposicoesOpen(!isExposicoesOpen);
+  const toggleVisite = () => setIsVisiteOpen(!isVisiteOpen);
+  const toggleApoie = () => setIsApoieOpen(!isApoieOpen);
 
   const navigate = useNavigate();
 
@@ -95,7 +95,7 @@ export function Header() {
                   Museu
                   {isAcervoOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
                 </button>
-                {!isAcervoOpen && (
+                {isAcervoOpen && (
                   <div className="mt-2 space-y-2">
                    <button
                 className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
@@ -125,7 +125,7 @@ export function Header() {
                   Cultura Indígena
                   {isCulturaOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
                 </button>
-                {!isCulturaOpen && (
+                {isCulturaOpen && (
                   <div className="mt-2 space-y-2">
                     <button
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
@@ -157,7 +157,7 @@ export function Header() {
                  Programação
           {isExposicoesOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
         </button>
-        {!isExposicoesOpen && (
+        {isExposicoesOpen && (
           <div className="mt-2 space-y-2">
             <button
              className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
@@ -197,7 +197,7 @@ export function Header() {
           Visite
           {isVisiteOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
         </button>
-        {!isVisiteOpen && (
+        {isVisiteOpen && (
           <div className="mt-2 space-y-2">
             <button
               className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
@@ -240,7 +240,7 @@ export function Header() {
           Apoie
           {isApoieOpen ? <AiOutlineDown className="ml-1 text-lg" /> : <AiOutlineRight className="ml-1 text-lg" />}
         </button>
-        {!isApoieOpen && (
+        {isApoieOpen && (
           <div className="mt-2 space-y-2">
             <button
               className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
