@@ -1,6 +1,6 @@
 
 import { createBrowserRouter } from "react-router-dom";
-import { Home } from "./home";
+import { Home } from "../src/home/index";
 import { Layout } from "./components/layout/layout";
 import { Historiaindigena } from "./culturaIndígena/historiaindigena";
 import { CulturaIndigena } from "./components/layout/culturaindigena";

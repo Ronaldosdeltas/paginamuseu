@@ -10,6 +10,7 @@ export function Header() {
   const [isExposicoesOpen, setIsExposicoesOpen] = useState(false);
   const [isVisiteOpen, setIsVisiteOpen] = useState(false);
   const [isApoieOpen, setIsApoieOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // Novo estado para detectar scroll
 
   const acervoRef = useRef<HTMLDivElement>(null);
   const culturaRef = useRef<HTMLDivElement>(null);
@@ -82,9 +83,23 @@ export function Header() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [isMobileMenuOpen]);
 
+  // Detecta o scroll da página
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-[#116cc2] w-full py-6 px-5 relative z-50">
-      <div className="flex items-center justify-between">
+     <header
+      className={`bg-[#116cc2] flex flex-col w-full py-3 items-center justify-center py-6 px-5 fixed top-0  left-0  z-50 shadow-md transition-all duration-300 ${
+        isScrolled ? "bg-opacity-100" : "bg-opacity-80"
+      }`}
+    >
+      <div className="flex items-center justify-between w-full px-3  ">
+
         {/* Logo e Título à esquerda */}
         <Link
           to="/"
@@ -102,7 +117,7 @@ export function Header() {
         <button
           ref={menuToggleRef} // Adiciona a ref ao botão de abrir o menu
           onClick={toggleMobileMenu}
-          className="text-amber-50 text-2xl md:hidden"
+          className="text-amber-50 text-2xl md:hidden px-1"
         >
           <AiOutlineMenu />
         </button>
