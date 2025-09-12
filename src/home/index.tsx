@@ -57,7 +57,7 @@ export function Home() {
   };
 
   return (
-    <div>
+    <div className="">
       {/* Imagem estática no topo */}
       <div className="w-full">
         <img
@@ -68,7 +68,7 @@ export function Home() {
       </div>
 
       {/* Carrossel abaixo da imagem estática */}
-      <div className="relative w-full max-w-5xl mx-auto mt-10 overflow-hidden mb-10">
+      <div className="relative w-full max-w-5xl mx-auto mt-10 overflow-hidden mb-10 rounded-lg shadow-lg">
         <button
           onClick={goToPrev}
           className="absolute left-2 top-1/2 transform -translate-y-1/2 text-black text-3xl z-10 hover:text-amber-300"
@@ -115,6 +115,58 @@ export function Home() {
           ))}
         </div>
       </div>
+
+      {/* Seção de Programação */}
+      <div className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
+        <div className="max-w-5xl mx-auto ">
+          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Programação</h2>
+          <div className="flex flex-col md:flex-row justify-between gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md flex-1">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Exposições Atuais</h3>
+              <p className="text-gray-600 mb-4">
+                Confira as exposições em destaque que exploram a cultura e história de Itarema.
+                Venha visitar e mergulhe na arte e nas tradições locais.
+              </p>
+              <Link
+                to="/exposicoes/atual"
+                className="inline-block bg-amber-500 text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition"
+              >
+                Ver Exposições
+              </Link>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md flex-1 ">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Eventos Futuros</h3>
+              <p className="text-gray-600 mb-4">
+                Participe dos próximos eventos culturais que celebram a diversidade de Itarema.
+                Fique atento às datas e participe!
+              </p>
+              <Link
+                to="/exposicoes/eventos"
+                className="inline-block bg-amber-500 text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition"
+              >
+                Ver Eventos
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          {/* Seção de Sobre Nós */}
+         <div className="bg-white py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Sobre Nós</h2>
+          <div className="text-gray-600 text-center bg-amber-500 p-6 rounded-lg shadow-md">
+            <p className="mb-4">
+              O Museu Itaa é um espaço dedicado à preservação e celebração da cultura e história de Itarema. Fundado em 2005, o museu abriga uma vasta coleção de artefatos, obras de arte e exposições que refletem a rica herança da região.</p>
+            <p className="mb-4">Nossa missão é educar e inspirar a comunidade local e visitantes, promovendo o entendimento e a apreciação da cultura itaremense. Oferecemos uma variedade de programas educacionais, eventos culturais e exposições temporárias para envolver o público de todas as idades.</p>
+            <p className="mb-4">
+              Venha nos visitar e descubra a história fascinante de Itarema através das nossas exposições e atividades interativas. Estamos localizados no centro da cidade, com fácil acesso e estacionamento disponível.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+        
   );
 }

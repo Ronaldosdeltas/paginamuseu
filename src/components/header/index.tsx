@@ -83,7 +83,7 @@ export function Header() {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="bg-gray-800 w-full py-6 px-5 relative z-50">
+    <header className="bg-[#116cc2] w-full py-6 px-5 relative z-50">
       <div className="flex items-center justify-between">
         {/* Logo e Título à esquerda */}
         <Link
