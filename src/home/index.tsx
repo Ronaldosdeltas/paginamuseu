@@ -69,7 +69,7 @@ export function Home() {
       </div>
 
     {/* Carrossel abaixo da imagem estática */}
-      <div className="max-w-4xl mx-auto mt-20  px-5 ">
+      <div className="max-w-4xl mx-auto mt-20 ">
         <h2 className="text-3xl font-bold text-gray-800 text-center ">Notícias Atuais</h2>
         <div className="relative w-full max-w-5xl mx-auto mt-0 overflow-hidden mb-10 rounded-lg shadow-lg">
           <button
