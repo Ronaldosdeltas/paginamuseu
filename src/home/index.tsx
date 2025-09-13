@@ -2,19 +2,19 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
-import Museuitaa from "/src/assets/images/museuitaa.jpeg";
+import Itacover from "/src/assets/images/Itacover.jpg";
 
 export function Home() {
   // Imagem estática no topo
   const staticImage = {
-    src: Museuitaa,
+    src: Itacover,
     alt: "Imagem de capa do Museu Itaa",
   };
 
   // Imagens para o carrossel
   const carouselImages = [
     {
-      src: Museuitaa,
+      src: Itacover,
       alt: "Imagem do Museu Itaa",
       path: "/visite/horarios",
       caption: "Horários",
@@ -59,7 +59,7 @@ export function Home() {
   return (
     <div className="flex flex-col w-full items-center justify-center">
       {/* Imagem estática no topo */}
-      <div className="w-full mt-21 rounded-lg shadow-lg overflow-hidden">
+      <div className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden">
         <img
           src={staticImage.src}
           alt={staticImage.alt}

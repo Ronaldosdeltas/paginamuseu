@@ -94,7 +94,7 @@ export function Header() {
 
   return (
      <header
-      className={`bg-[#116cc2] flex flex-col w-full py-3 items-center justify-center py-6 px-5 fixed top-0  left-0  z-50 shadow-md transition-all duration-300 ${
+      className={`bg-[#116cc2] flex flex-col w-full  items-center justify-center py-6 px-5 fixed top-0  left-0  z-50 shadow-md transition-all duration-300 ${
         isScrolled ? "bg-opacity-100" : "bg-opacity-80"
       }`}
     >
@@ -124,7 +124,7 @@ export function Header() {
 
         {/* Menu lateral para mobile */}
         <div
-          className={`fixed top-0 left-0 w-64 bg-gray-800 h-full transform ${
+          className={`fixed top-0 left-0 w-64 bg-[#116cc2] h-full transform ${
             isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out z-50 mobile-menu`}
         >
