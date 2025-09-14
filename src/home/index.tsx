@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
@@ -65,12 +64,11 @@ export function Home() {
           alt={staticImage.alt}
           className="w-full h-auto object-cover"
         />
-        
       </div>
 
-    {/* Carrossel abaixo da imagem estática */}
-      <div className="max-w-4xl mx-auto mt-20  px-5 ">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-4 ">Notícias Atuais</h2>
+      {/* Carrossel abaixo da imagem estática */}
+      <div className="max-w-4xl mx-auto mt-20 px-5">
+        <h2 className="text-3xl font-bold text-gray-800 text-center mb-4">Notícias Atuais</h2>
         <div className="relative w-full max-w-5xl mx-auto mt-0 overflow-hidden mb-10 rounded-lg shadow-lg">
           <button
             onClick={goToPrev}
@@ -79,7 +77,7 @@ export function Home() {
             <AiOutlineLeft />
           </button>
           <div
-            className="flex transition-transform duration-500  ease-in-out"
+            className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {carouselImages.map((image, index) => (
@@ -123,7 +121,7 @@ export function Home() {
       {/* Seção de Programação */}
       <div className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Programação</h2>
+          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Programação do Museu local</h2>
           <div className="flex flex-col md:flex-row justify-between gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md flex-1">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Exposições Atuais</h3>
@@ -158,7 +156,7 @@ export function Home() {
       {/* Seção de Sobre Nós */}
       <div className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Sobre Nós</h2>
+          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">História da Cidade</h2>
           <div className="text-gray-600 text-center bg-amber-500 p-6 rounded-lg shadow-md">
             <p className="mb-4">
               O Museu Itaa é um espaço dedicado à preservação e celebração da cultura e história de Itarema. Fundado em 2005, o museu abriga uma vasta coleção de artefatos, obras de arte e exposições que refletem a rica herança da região.
@@ -172,6 +170,38 @@ export function Home() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-[#116cc2] text-white py-8 px-5 w-full mt-10">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Navegação */}
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+            <Link to="/" className="hover:text-amber-300">Home</Link>
+            <Link to="/programacao" className="hover:text-amber-300">Programação</Link>
+            <Link to="/visite" className="hover:text-amber-300">Visite</Link>
+            <Link to="/apoie" className="hover:text-amber-300">Apoie</Link>
+          </div>
+
+          {/* Contatos */}
+          <div className="text-center md:text-left">
+            <p className="mb-2">Contato: museuitaa@itarema.gov.br</p>
+            <p>Rua Principal, 123, Centro - Itarema, CE</p>
+          </div>
+
+          {/* Redes Sociais */}
+          <div className="flex space-x-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">
+              Facebook
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">
+              Instagram
+            </a>
+          </div>
+        </div>
+        <div className="max-w-5xl mx-auto mt-4 text-center text-sm">
+          &copy; 2025 Museu Itaa. Todos os direitos reservados.
+        </div>
+      </footer>
     </div>
   );
 }
