@@ -131,7 +131,7 @@ export function Home() {
               </p>
               <Link
                 to="/exposicoes/atual"
-                className="inline-block bg-amber-500 text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
               >
                 Ver Exposições
               </Link>
@@ -144,7 +144,7 @@ export function Home() {
               </p>
               <Link
                 to="/exposicoes/eventos"
-                className="inline-block bg-amber-500 text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
               >
                 Ver Eventos
               </Link>
@@ -157,16 +157,20 @@ export function Home() {
       <div className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">História da Cidade</h2>
-          <div className="text-gray-600 text-center bg-amber-500 p-6 rounded-lg shadow-md">
+          <div className="text-white text-center font-medium bg-blue-400 p-6 rounded-lg shadow-md">
             <p className="mb-4">
-              O Museu Itaa é um espaço dedicado à preservação e celebração da cultura e história de Itarema. Fundado em 2005, o museu abriga uma vasta coleção de artefatos, obras de arte e exposições que refletem a rica herança da região.
+              A cidade de Itarema é uma alusão ao nome dado pelos índios por causa de uma pedra com forma de obelisco em alto mar que só era visível em maré baixa. Este vem do tupi ita (pedra), rema (cheiro agradável) e significa pedra de cheiro agradável ou pedra cheirosa.
             </p>
             <p className="mb-4">
-              Nossa missão é educar e inspirar a comunidade local e visitantes, promovendo o entendimento e a apreciação da cultura itaremense. Oferecemos uma variedade de programas educacionais, eventos culturais e exposições temporárias para envolver o público de todas as idades.
+              A cidade Chamou-se primitivamente Tanque do Meio, ocupando terras litorâneas entre os lugares denominados Tanque de Cima e Tanque de Baixo, reservatórios destinados ao abastecimento de água aos moradores das respectivas vizinhanças. Desse fragmentos de progresso nasceria a povoação, composta na maioria de habitantes e de atividades diversificadas.
             </p>
-            <p className="mb-4">
-              Venha nos visitar e descubra a história fascinante de Itarema através das nossas exposições e atividades interativas. Estamos localizados no centro da cidade, com fácil acesso e estacionamento disponível.
-            </p>
+           
+            <Link
+                to="/exposicoes/eventos"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
+              >
+                Saiba Mais sobre a Cidade
+              </Link>
           </div>
         </div>
       </div>
