@@ -108,7 +108,7 @@ export function Header() {
           <img
             src={Brasaoitarema}
             alt="Brasão de Itarema"
-            className="mr-4 w-10 h-10 object-contain"
+            className="mr-4 w-10 h-10 object-contain transform hover:rotate-360 transition-transform duration-500"
           />
           Itarema Cultura
         </Link>
