@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import Itacover from "/src/assets/images/Itacover.jpg";
+import itaordinaria from "/src/assets/images/itaordinaria.png";
 
 export function Home() {
   // Imagem estática no topo
@@ -19,9 +20,9 @@ export function Home() {
       caption: "Horários",
     },
     {
-      src: Itacover,
+      src: itaordinaria,
       alt: "Imagem de Localização",
-      path: "/visite/localizacao",
+      path: "https://www.instagram.com/itaremaordinariaof/reels/",
       caption: "Localização",
     },
     {
