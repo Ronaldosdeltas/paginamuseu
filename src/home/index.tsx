@@ -21,15 +21,15 @@ export function Home() {
     },
     {
       src: itaordinaria,
-      alt: "Imagem de Localização",
+      alt: "instagram com noticas da cidade",
       path: "https://www.instagram.com/itaremaordinariaof/reels/",
-      caption: "Localização",
+      caption: "Notícias da Cidade",
     },
     {
       src: Itacover,
-      path: "/videos",
-      alt: "Imagem de Compra de Tickets",
-      caption: "Compra de Tickets",
+      path: "https://www.instagram.com/reel/DOW4OtjkWSc/",
+      alt: "Dia 7 de Setembro.",
+      caption: "Dia 7 de Setembro",
     },
   ];
 
@@ -87,6 +87,8 @@ export function Home() {
                 key={index}
                 className="w-full flex-shrink-0"
                 onClick={(e) => e.stopPropagation()}
+                target={image.path.startsWith("http") ? "_blank" : undefined} // Abre em nova aba para URLs externas
+                rel={image.path.startsWith("http") ? "noopener noreferrer" : undefined} // Segurança para links externos
               >
                 <img
                   src={image.src}
