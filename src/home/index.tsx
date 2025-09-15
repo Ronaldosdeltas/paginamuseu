@@ -162,9 +162,6 @@ export function Home() {
             <p className="mb-4">
               A cidade de Itarema é uma alusão ao nome dado pelos índios por causa de uma pedra com forma de obelisco em alto mar que só era visível em maré baixa. Este vem do tupi ita (pedra), rema (cheiro agradável) e significa pedra de cheiro agradável ou pedra cheirosa.
             </p>
-            <p className="mb-4">
-              A cidade Chamou-se primitivamente Tanque do Meio, ocupando terras litorâneas entre os lugares denominados Tanque de Cima e Tanque de Baixo, reservatórios destinados ao abastecimento de água aos moradores das respectivas vizinhanças. Desse fragmentos de progresso nasceria a povoação, composta na maioria de habitantes e de atividades diversificadas.
-            </p>
            
             <Link
                 to="/exposicoes/eventos"
