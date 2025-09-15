@@ -25,8 +25,8 @@ export function Home() {
       caption: "Localização",
     },
     {
-      src: "/src/assets/images/tickets.jpg", // Substitua pelo caminho da sua imagem
-      path: "/visite/tickets",
+      src: Itacover,
+      path: "/videos",
       alt: "Imagem de Compra de Tickets",
       caption: "Compra de Tickets",
     },
