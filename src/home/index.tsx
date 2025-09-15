@@ -19,7 +19,7 @@ export function Home() {
       caption: "Horários",
     },
     {
-      src: "/src/assets/images/localizacao.jpg", // Substitua pelo caminho da sua imagem
+      src: Itacover,
       alt: "Imagem de Localização",
       path: "/visite/localizacao",
       caption: "Localização",
