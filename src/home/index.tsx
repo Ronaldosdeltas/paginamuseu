@@ -165,12 +165,14 @@ export function Home() {
               A cidade de Itarema é uma alusão ao nome dado pelos índios por causa de uma pedra com forma de obelisco em alto mar que só era visível em maré baixa. Este vem do tupi ita (pedra), rema (cheiro agradável) e significa pedra de cheiro agradável ou pedra cheirosa.
             </p>
            
-            <Link
-                to="/exposicoes/eventos"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
-              >
-                Saiba Mais sobre a Cidade
-              </Link>
+              <a
+              href="https://itaremaprevi.com.br/institucional/conheca-a-cidade/"
+              className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Saiba Mais sobre a Cidade
+            </a>
           </div>
         </div>
       </div>
