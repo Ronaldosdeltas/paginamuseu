@@ -71,51 +71,53 @@ export function Home() {
       <div className="max-w-4xl mx-auto mt-20 px-5">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-4">Notícias Atuais</h2>
         <div className="relative w-full max-w-5xl mx-auto mt-0 overflow-hidden mb-10 rounded-lg shadow-lg">
-          <button
-            onClick={goToPrev}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 text-black text-3xl z-10 hover:text-amber-300"
-          >
-            <AiOutlineLeft />
-          </button>
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {carouselImages.map((image, index) => (
-              <Link
-                to={image.path}
-                key={index}
-                className="w-full flex-shrink-0"
-                onClick={(e) => e.stopPropagation()}
-                target={image.path.startsWith("http") ? "_blank" : undefined} // Abre em nova aba para URLs externas
-                rel={image.path.startsWith("http") ? "noopener noreferrer" : undefined} // Segurança para links externos
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
-                  {image.caption}
-                </div>
-              </Link>
-            ))}
+         <button
+    onClick={goToPrev}
+    className="absolute left-2 top-1/2 transform -translate-y-1/2 text-black text-3xl z-10 hover:text-amber-300"
+  >
+    <AiOutlineLeft />
+  </button>
+  <div
+    className="flex transition-transform duration-500 ease-in-out"
+    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+  >
+    {carouselImages.map((image, index) => (
+      <Link
+        to={image.path}
+        key={index}
+        className="w-full flex-shrink-0 relative" 
+        target={image.path.startsWith("http") ? "_blank" : undefined}
+        rel={image.path.startsWith("http") ? "noopener noreferrer" : undefined}
+      >
+        <img
+          src={image.src}
+          alt={image.alt}
+          className="w-full h-auto object-cover"
+        />
+        {index === currentIndex && (
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+            {image.caption}
           </div>
-          <button
-            onClick={goToNext}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 text-black text-3xl z-10 hover:text-amber-300"
-          >
-            <AiOutlineRight />
-          </button>
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {carouselImages.map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full ${
-                  currentIndex === index ? "bg-white" : "bg-gray-400"
-                }`}
-                onClick={() => setCurrentIndex(index)}
-              ></button>
+        )}
+      </Link>
+    ))}
+  </div>
+  <button
+    onClick={goToNext}
+    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-black text-3xl z-10 hover:text-amber-300"
+  >
+    <AiOutlineRight />
+  </button>
+  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    {carouselImages.map((_, index) => (
+      <button
+        key={index}
+        className={`w-3 h-3 rounded-full ${
+          currentIndex === index ? "bg-white" : "bg-gray-400"
+        }`}
+        onClick={() => setCurrentIndex(index)}
+      ></button>
+    
             ))}
           </div>
         </div>

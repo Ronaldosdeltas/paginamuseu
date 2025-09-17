@@ -94,8 +94,8 @@ export function Header() {
 
   return (
      <header
-      className={`bg-[#116cc2] flex flex-col w-full  items-center justify-center py-6 px-5 fixed top-0  left-0  z-50 shadow-md transition-all duration-300 ${
-        isScrolled ? "bg-opacity-100" : "bg-opacity-80"
+      className={`bg-[#116cc2] flex flex-col w-full items-center justify-center py-6 px-5 fixed top-0 left-0 z-50 shadow-md transition-all duration-300 ${
+        isScrolled ? "bg-opacity-5" : "bg-opacity-100"
       }`}
     >
       <div className="flex items-center justify-between w-full px-3  ">
