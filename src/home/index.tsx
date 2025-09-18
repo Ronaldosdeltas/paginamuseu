@@ -69,7 +69,7 @@ export function Home() {
 
       {/* Carrossel abaixo da imagem estática */}
       <div className="max-w-4xl mx-auto mt-20 px-5">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-4">Notícias Atuais</h2>
+        <h2 className="text-3xl font-medium text-gray-800 text-center mb-4">Notícias Atuais</h2>
         <div className="relative w-full max-w-5xl mx-auto mt-0 overflow-hidden mb-10 rounded-lg shadow-lg">
          <button
     onClick={goToPrev}
@@ -126,7 +126,7 @@ export function Home() {
       {/* Seção de Programação */}
       <div className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Programação do Museu local</h2>
+          <h2 className="text-3xl font-medium text-gray-800 text-left mb-8">Programação do Museu local</h2>
           <div className="flex flex-col md:flex-row justify-between gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md flex-1">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Exposições Atuais</h3>
@@ -159,7 +159,7 @@ export function Home() {
       </div>
 
         <div className="bg-gray-100 max-w-6xl py-12 md:px-10 mx-auto mt-10 px-5 mb-10 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-8 mt-8">Destaques Culturais</h2>
+        <h2 className="text-3xl font-medium text-gray-800 text-left mb-8 mt-8">Destaques Culturais</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 mb-8 gap-6">
           {[
             {
@@ -201,7 +201,7 @@ export function Home() {
       {/* Seção de Sobre a Cidade */}
       <div className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">História da Cidade</h2>
+          <h2 className="text-3xl  text-gray-800 text-left font-sans font-medium mb-8">História da Cidade</h2>
           <div className="text-white text-center font-medium bg-blue-400 p-6 rounded-lg shadow-md">
             <p className="mb-4">
               A cidade de Itarema é uma alusão ao nome dado pelos índios por causa de uma pedra com forma de obelisco em alto mar que só era visível em maré baixa. Este vem do tupi ita (pedra), rema (cheiro agradável) e significa pedra de cheiro agradável ou pedra cheirosa.
@@ -219,7 +219,52 @@ export function Home() {
         </div>
       </div>
 
-      <div className=" bg-gray-100 flex flex-col w-full items-center justify-center rounded-lg shadow-lg">
+       <div className="max-w-5xl mx-auto py-12 md:px-10 m-4 flex flex-col w-full items-center justify-center rounded-lg shadow-lg mt-10 px-5">
+        <h2 className="text-3xl font-medium text-gray-800 text-left font-sans mb-8">Nossos Parceiros</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {[
+            { name: "Prefeitura de Itarema", logo: Itacover, url: "https://itarema.ce.gov.br" },
+            { name: "Instituto Cultural", logo: itaordinaria, url: "https://example.com" },
+          ].map((partner, index) => (
+            <a
+              key={index}
+              href={partner.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-32 h-32"
+            >
+              <img
+                src={partner.logo}
+                alt={`Logo ${partner.name}`}
+                className="w-full h-full object-contain"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+
+       <div className="bg-gray-100 py-12 px-5 md:px-10 m-4 flex flex-col w-full items-center justify-center rounded-lg shadow-lg">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-medium text-gray-800 text-left mb-4">Fique por Dentro</h2>
+          <p className="text-gray-600 mb-6">Inscreva-se para receber novidades sobre eventos e exposições do Museu Itaa.</p>
+          <form className="flex flex-col sm:flex-row justify-center gap-4">
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600"
+            />
+            <button
+              type="submit"
+              className="bg-green-600 text-white px-5 py-3 rounded-lg hover:bg-green-500 transition"
+            >
+              Inscrever-se
+            </button>
+          </form>
+        </div>
+      </div>
+
+             {/* Seção de Localização */}
+      <div className=" bg-gray-100 flex flex-col w-full items-center justify-center mt-8 rounded-lg shadow-lg">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.633081210379!2d-39.916420326034746!3d-2.921409997054933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c1ffbe3035b6f5%3A0x9fd0b9522cd9a977!2sCentro%20Hist%C3%B3rico%20e%20Cultura%20Museu%20Vicente%20de%20Paula%20Rios!5e0!3m2!1sen!2sbr!4v1727204147384!5m2!1sen!2sbr"
           width="100%"
@@ -234,7 +279,7 @@ export function Home() {
           <p className="text-gray-600">Aberto de Terça a Domingo, das 9h às 17h</p>
           <Link
             to="/visite/como-chegar"
-            className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition mt-4"
+            className="inline-block bg-green-600 text-white mb-5 px-4 py-2 rounded-lg hover:bg-green-500 transition mt-4"
           >
             Mais Informações
           </Link>
