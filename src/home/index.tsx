@@ -158,7 +158,47 @@ export function Home() {
         </div>
       </div>
 
-      {/* Seção de Sobre Nós */}
+        <div className="bg-gray-100 max-w-6xl py-12 md:px-10 mx-auto mt-10 px-5 mb-10 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-gray-800 text-center mb-8 mt-8">Destaques Culturais</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 mb-8 gap-6">
+          {[
+            {
+              title: "Exposição: Raízes de Itarema",
+              description: "Explore a história dos povos indígenas de Itarema.",
+              image: Itacover,
+              path: "/exposicoes/raizes",
+            },
+            {
+              title: "Festival da Cultura",
+              description: "Celebre as tradições locais com música e dança.",
+              image: itaordinaria,
+              path: "/eventos/festival",
+            },
+            {
+              title: "História da Pedra Cheirosa",
+              description: "Conheça a lenda por trás do nome Itarema.",
+              image: Itacover,
+              path: "/historia/pedra-cheirosa",
+            },
+          ].map((highlight, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src={highlight.image} alt={highlight.title} className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">{highlight.title}</h3>
+                <p className="text-gray-600 mb-4">{highlight.description}</p>
+                <Link
+                  to={highlight.path}
+                  className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
+                >
+                  Saiba Mais
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Seção de Sobre a Cidade */}
       <div className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">História da Cidade</h2>
