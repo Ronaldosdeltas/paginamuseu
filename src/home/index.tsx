@@ -219,16 +219,16 @@ export function Home() {
         </div>
       </div>
 
-      <div className=" w-full py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
-      <div className="bg-white p-6">
+      <div className=" w-280 py-12 px-5 md:px-10 m-4 mt-8 rounded-lg shadow-lg">
+     
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.123456789!2d-39.916667!3d-2.924722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMuKwNTUnMjguOCJTIDM5wrA1NCc2MC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1634567890123!5m2!1spt-BR!2sbr"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.633081210379!2d-39.916420326034746!3d-2.921409997054933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c1ffbe3035b6f5%3A0x9fd0b9522cd9a977!2sCentro%20Hist%C3%B3rico%20e%20Cultura%20Museu%20Vicente%20de%20Paula%20Rios!5e0!3m2!1sen!2sbr!4v1727204147384!5m2!1sen!2sbr"
           width="100%"
           height="110"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
-          className="rounded-lg"
+          className="rounded-lg "
         ></iframe>
         <div className="mt-4 text-center">
           <p className="text-gray-600">Rua Principal, 123, Centro - Itarema, CE</p>
@@ -240,7 +240,7 @@ export function Home() {
             Mais Informações
           </Link>
         </div>
-      </div>
+      
     </div>
 
       {/* Footer */}
