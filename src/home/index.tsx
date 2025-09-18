@@ -219,6 +219,30 @@ export function Home() {
         </div>
       </div>
 
+      <div className=" w-full py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg">
+      <div className="bg-white p-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.123456789!2d-39.916667!3d-2.924722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMuKwNTUnMjguOCJTIDM5wrA1NCc2MC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1634567890123!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="110"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          className="rounded-lg"
+        ></iframe>
+        <div className="mt-4 text-center">
+          <p className="text-gray-600">Rua Principal, 123, Centro - Itarema, CE</p>
+          <p className="text-gray-600">Aberto de Terça a Domingo, das 9h às 17h</p>
+          <Link
+            to="/visite/como-chegar"
+            className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition mt-4"
+          >
+            Mais Informações
+          </Link>
+        </div>
+      </div>
+    </div>
+
       {/* Footer */}
       <footer className="bg-[#116cc2] text-white py-8 px-5 w-full mt-10">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
