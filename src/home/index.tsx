@@ -95,7 +95,7 @@ export function Home() {
         <div className="relative w-full max-w-5xl mx-auto mt-0 overflow-hidden mb-10 rounded-lg shadow-lg">
           <button
             onClick={goToPrev}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2  bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
             aria-label="Imagem anterior"
           >
             <AiOutlineLeft />
@@ -108,7 +108,7 @@ export function Home() {
               <Link
                 to={image.path}
                 key={index}
-                className=" w-full flex-shrink-0 relative"
+                className="w-full flex-shrink-0 relative"
                 target={image.path.startsWith("http") ? "_blank" : undefined}
                 rel={image.path.startsWith("http") ? "noopener noreferrer" : undefined}
               >
@@ -127,7 +127,7 @@ export function Home() {
           </div>
           <button
             onClick={goToNext}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2  bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
             aria-label="Próxima imagem"
           >
             <AiOutlineRight />
@@ -204,10 +204,10 @@ export function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 mb-8 gap-6">
           {[
             {
-              title: "Exposição: Raízes de Itarema",
-              description: "Explore a história dos povos indígenas de Itarema.",
+              title: "Raízes de Itarema",
+              description: "Os 70 anos da paróquia de Itarema.",
               image: Itacover,
-              path: "/exposicoes/raizes",
+              path: "https://youtu.be/XtHA4LkxcOI?si=gm_oJ38DlM90Iqu2",
             },
             {
               title: "Festival da Cultura",
@@ -236,12 +236,23 @@ export function Home() {
                   {highlight.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{highlight.description}</p>
-                <Link
-                  to={highlight.path}
-                  className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
-                >
-                  Saiba Mais
-                </Link>
+                {highlight.path.startsWith("http") ? (
+                  <a
+                    href={highlight.path}
+                    className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Saiba Mais
+                  </a>
+                ) : (
+                  <Link
+                    to={highlight.path}
+                    className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
+                  >
+                    Saiba Mais
+                  </Link>
+                )}
               </div>
             </div>
           ))}
