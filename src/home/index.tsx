@@ -4,7 +4,7 @@ import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Itacover from "/src/assets/images/Itacover.jpg";
-import itaordinaria from "/src/assets/images/itaordinaria.png";
+import itaord from "/src/assets/images/itaord.png";
 
 export function Home() {
   // Inicializar AOS
@@ -32,7 +32,7 @@ export function Home() {
       caption: "Horários",
     },
     {
-      src: itaordinaria,
+      src: itaord,
       alt: "Instagram com notícias da cidade",
       path: "https://www.instagram.com/itaremaordinariaof/reels/",
       caption: "Notícias da Cidade",
@@ -85,7 +85,7 @@ export function Home() {
 
       {/* Carrossel abaixo da imagem estática */}
       <div
-        className="max-w-4xl mx-auto mt-20 px-5"
+        className="max-w-100 mx-auto mt-20"
         data-aos="fade-up"
         data-aos-delay="200"
       >
@@ -95,7 +95,7 @@ export function Home() {
         <div className="relative w-full max-w-5xl mx-auto mt-0 overflow-hidden mb-10 rounded-lg shadow-lg">
           <button
             onClick={goToPrev}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 text-black text-3xl z-10 hover:text-amber-300"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2  bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
             aria-label="Imagem anterior"
           >
             <AiOutlineLeft />
@@ -108,14 +108,14 @@ export function Home() {
               <Link
                 to={image.path}
                 key={index}
-                className="w-full flex-shrink-0 relative"
+                className=" w-full flex-shrink-0 relative"
                 target={image.path.startsWith("http") ? "_blank" : undefined}
                 rel={image.path.startsWith("http") ? "noopener noreferrer" : undefined}
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                 />
                 {index === currentIndex && (
                   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
@@ -127,7 +127,7 @@ export function Home() {
           </div>
           <button
             onClick={goToNext}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 text-black text-3xl z-10 hover:text-amber-300"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2  bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
             aria-label="Próxima imagem"
           >
             <AiOutlineRight />
@@ -212,7 +212,7 @@ export function Home() {
             {
               title: "Festival da Cultura",
               description: "Celebre as tradições locais com música e dança.",
-              image: itaordinaria,
+              image: itaord,
               path: "/eventos/festival",
             },
             {
@@ -295,7 +295,7 @@ export function Home() {
             },
             {
               name: "Instituto Cultural",
-              logo: itaordinaria,
+              logo: itaord,
               url: "https://example.com",
             },
           ].map((partner, index) => (
