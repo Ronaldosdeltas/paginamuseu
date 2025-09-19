@@ -12,7 +12,8 @@ export function Home() {
     AOS.init({
       duration: 800, // Duração da animação em milissegundos
       easing: "ease-in-out", // Tipo de suavização
-      once: true, // Animação ocorre apenas uma vez
+      mirror: true, // Reverte a animação ao sair do viewport
+      anchorPlacement: "top-bottom", // Dispara a animação quando o topo da seção atinge a parte inferior do viewport
     });
   }, []);
 
