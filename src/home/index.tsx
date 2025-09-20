@@ -5,6 +5,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Itacover from "/src/assets/images/Itacover.jpg";
 import itaord from "/src/assets/images/itaord.png";
+import maracá from "/src/assets/images/maracá.jpg";
+import sportIta from "/src/assets/images/sportita.jpg";
+//import AnimatedBackground from "../components/animatedbg/animatedbackground";
 
 export function Home() {
   // Inicializar AOS
@@ -26,10 +29,10 @@ export function Home() {
   // Imagens para o carrossel
   const carouselImages = [
     {
-      src: Itacover,
+      src: sportIta,
       alt: "Imagem do Museu Itaa",
-      path: "/visite/horarios",
-      caption: "Horários",
+      path: "https://www.instagram.com/reel/DOjvgJOEYoa/",
+      caption: "final Compeonato futsal",
     },
     {
       src: itaord,
@@ -38,7 +41,7 @@ export function Home() {
       caption: "Notícias da Cidade",
     },
     {
-      src: Itacover,
+      src: maracá,
       path: "https://www.instagram.com/reel/DOW4OtjkWSc/",
       alt: "Dia 7 de Setembro",
       caption: "Dia 7 de Setembro",
@@ -84,8 +87,9 @@ export function Home() {
       </div>
 
       {/* Carrossel abaixo da imagem estática */}
+      <div className="w-full bg-gray-200 flex justify-center items-center mt-3 rounded-lg shadow-lg">
       <div
-        className="max-w-100 mx-auto mt-20"
+        className="max-w-100 mx-auto mt-20 relative z-10"
         data-aos="fade-up"
         data-aos-delay="200"
       >
@@ -145,6 +149,7 @@ export function Home() {
             ))}
           </div>
         </div>
+      </div>
       </div>
 
       {/* Seção de Programação */}
