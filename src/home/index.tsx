@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import Itacover from "/src/assets/images/Itacover.jpg";
 import itaord from "/src/assets/images/itaord.png";
 import maracá from "/src/assets/images/maracá.jpg";
-import sportIta from "/src/assets/images/sportita.jpg";
+import sportIta from "/src/assets/images/sportIta.jpg";
 //import AnimatedBackground from "../components/animatedbg/animatedbackground";
 
 export function Home() {
