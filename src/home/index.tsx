@@ -290,7 +290,7 @@ export function Home() {
 
       {/* Seção de Newsletter */}
       <div
-        className="bg-gray-100 py-12 px-5 md:px-10 m-4 flex flex-col w-260 mx-auto rounded-lg shadow-lg items-center justify-center"
+        className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg"
         data-aos="fade-up"
         data-aos-delay="700"
       >
