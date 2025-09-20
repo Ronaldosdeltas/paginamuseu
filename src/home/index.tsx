@@ -69,7 +69,7 @@ export function Home() {
   };
 
   return (
-    <div className="flex bg-[#f5fbfb] flex-col w-full items-center justify-center">
+    <div className="flex flex-col w-full items-center justify-center">
       {/* Imagem estática no topo */}
       <div
         className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden"
@@ -194,7 +194,7 @@ export function Home() {
 
       {/* Seção de Destaques Culturais */}
       <div
-        className="bg-gray-100 w-280 py-12 md:px-10 mx-auto mt-10 px-5 mb-10 rounded-lg shadow-lg"
+        className="bg-gray-100 max-w-6xl py-12 md:px-10 mx-auto mt-10 px-5 mb-10 rounded-lg shadow-lg"
         data-aos="fade-up"
         data-aos-delay="400"
       >
@@ -261,7 +261,7 @@ export function Home() {
 
       {/* Seção de Sobre a Cidade */}
       <div
-        className="bg-gray-100 w-280 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg"
+        className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg"
         data-aos="fade-up"
         data-aos-delay="500"
       >
@@ -290,7 +290,7 @@ export function Home() {
 
       {/* Seção de Newsletter */}
       <div
-        className="bg-gray-100 py-12 w-280 px-5 md:px-10 m-4 flex flex-col mx-auto rounded-lg shadow-lg items-center justify-center"
+        className="bg-gray-100 py-12 px-5 md:px-10 m-4 flex flex-col w-260 mx-auto rounded-lg shadow-lg items-center justify-center"
         data-aos="fade-up"
         data-aos-delay="700"
       >
