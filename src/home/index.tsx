@@ -10,7 +10,7 @@ export function Home() {
   // Inicializar AOS
   useEffect(() => {
     AOS.init({
-      duration: 800, // Duração da animação em milissegundos
+      duration: 600, // Duração da animação em milissegundos
       easing: "ease-in-out", // Tipo de suavização
       mirror: true, // Reverte a animação ao sair do viewport
       anchorPlacement: "top-bottom", // Dispara a animação quando o topo da seção atinge a parte inferior do viewport
@@ -69,7 +69,7 @@ export function Home() {
   };
 
   return (
-    <div className="flex flex-col w-full items-center justify-center">
+    <div className="flex bg-[#f5fbfb] flex-col w-full items-center justify-center">
       {/* Imagem estática no topo */}
       <div
         className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden"
@@ -194,7 +194,7 @@ export function Home() {
 
       {/* Seção de Destaques Culturais */}
       <div
-        className="bg-gray-100 max-w-6xl py-12 md:px-10 mx-auto mt-10 px-5 mb-10 rounded-lg shadow-lg"
+        className="bg-gray-100 w-280 py-12 md:px-10 mx-auto mt-10 px-5 mb-10 rounded-lg shadow-lg"
         data-aos="fade-up"
         data-aos-delay="400"
       >
@@ -261,7 +261,7 @@ export function Home() {
 
       {/* Seção de Sobre a Cidade */}
       <div
-        className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg"
+        className="bg-gray-100 w-280 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg"
         data-aos="fade-up"
         data-aos-delay="500"
       >
@@ -288,48 +288,9 @@ export function Home() {
         </div>
       </div>
 
-      {/* Seção de Parceiros */}
-      <div
-        className="max-w-5xl mx-auto py-12 md:px-10 m-4 flex flex-col w-full items-center justify-center rounded-lg shadow-lg"
-        data-aos="fade-up"
-        data-aos-delay="600"
-      >
-        <h2 className="text-3xl font-medium text-gray-800 text-left font-sans mb-8">
-          Nossos Parceiros
-        </h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          {[
-            {
-              name: "Prefeitura de Itarema",
-              logo: Itacover,
-              url: "https://itarema.ce.gov.br",
-            },
-            {
-              name: "Instituto Cultural",
-              logo: itaord,
-              url: "https://example.com",
-            },
-          ].map((partner, index) => (
-            <a
-              key={index}
-              href={partner.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-32 h-32"
-            >
-              <img
-                src={partner.logo}
-                alt={`Logo ${partner.name}`}
-                className="w-full h-full object-contain"
-              />
-            </a>
-          ))}
-        </div>
-      </div>
-
       {/* Seção de Newsletter */}
       <div
-        className="bg-gray-100 py-12 px-5 md:px-10 m-4 flex flex-col w-full items-center justify-center rounded-lg shadow-lg"
+        className="bg-gray-100 py-12 w-280 px-5 md:px-10 m-4 flex flex-col mx-auto rounded-lg shadow-lg items-center justify-center"
         data-aos="fade-up"
         data-aos-delay="700"
       >
@@ -359,7 +320,7 @@ export function Home() {
 
       {/* Seção de Localização */}
       <div
-        className="bg-gray-100 flex flex-col w-full items-center justify-center mt-8 rounded-lg shadow-lg"
+        className="bg-gray-100 flex flex-col w-full items-center justify-center mt-8 "
         data-aos="fade-up"
         data-aos-delay="800"
       >
