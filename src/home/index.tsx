@@ -194,7 +194,7 @@ export function Home() {
 
       {/* Seção de Destaques Culturais */}
       <div
-        className="bg-gray-100 max-w-6xl py-12 md:px-10 mx-auto mt-10 px-5 mb-10 rounded-lg shadow-lg"
+        className="bg-gray-100 max-w-6xl py-12 md:px-10 mx-auto flex flex-col justify-center items-center mt-10 px-5 mb-10 rounded-lg shadow-lg"
         data-aos="fade-up"
         data-aos-delay="400"
       >
@@ -290,7 +290,7 @@ export function Home() {
 
       {/* Seção de Newsletter */}
       <div
-        className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg"
+        className="py-10 px-5 w-full justify-center flex md:px-10 m-4 "
         data-aos="fade-up"
         data-aos-delay="700"
       >
@@ -320,7 +320,7 @@ export function Home() {
 
       {/* Seção de Localização */}
       <div
-        className="bg-gray-100 flex flex-col w-full items-center justify-center mt-8 "
+        className="bg-gray-100 flex flex-col w-full items-center justify-center mt-5 "
         data-aos="fade-up"
         data-aos-delay="800"
       >
@@ -351,7 +351,7 @@ export function Home() {
 
       {/* Footer */}
       <footer
-        className="bg-[#116cc2] text-white py-8 px-5 w-full mt-10"
+        className="bg-[#116cc2] text-white py-8 px-5 w-full mt-2"
         data-aos="fade-up"
         data-aos-delay="900"
       >
