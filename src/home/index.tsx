@@ -7,6 +7,9 @@ import Itacover from "/src/assets/images/Itacover.jpg";
 import itaord from "/src/assets/images/itaord.png";
 import maracá from "/src/assets/images/maracá.jpg";
 import sportIta from "/src/assets/images/sportIta.jpg";
+import itachitão from "/src/assets/images/itachitão.jpeg";
+import paroquiaitarema from "/src/assets/images/paroquiaitarema.avif";
+import IgrejaAlmofala from "/src/assets/images/IgrejaAlmofala.jpg";
 //import AnimatedBackground from "../components/animatedbg/animatedbackground";
 
 export function Home() {
@@ -172,7 +175,7 @@ export function Home() {
                 de Itarema. Venha visitar e mergulhe na arte e nas tradições locais.
               </p>
               <Link
-                to="/exposicoes/atual"
+                to="/programacao/atual"
                 className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
               >
                 Ver Exposições
@@ -211,20 +214,20 @@ export function Home() {
             {
               title: "Raízes de Itarema",
               description: "Os 70 anos da paróquia de Itarema.",
-              image: Itacover,
+              image: paroquiaitarema,
               path: "https://youtu.be/XtHA4LkxcOI?si=gm_oJ38DlM90Iqu2",
             },
             {
               title: "Festival da Cultura",
-              description: "Celebre as tradições locais com música e dança.",
-              image: itaord,
-              path: "/eventos/festival",
+              description: "Cobertura do festival cultural de Itachitão de 2025.",
+              image: itachitão,
+              path: "https://www.instagram.com/p/DLsnhGCpmAK/",
             },
             {
-              title: "História da Pedra Cheirosa",
-              description: "Conheça a lenda por trás do nome Itarema.",
-              image: Itacover,
-              path: "/historia/pedra-cheirosa",
+              title: "Religião Católica de itarema (História)",
+              description: "Conheça a Historia do Início da Religião Católica de Itarema.",
+              image: IgrejaAlmofala,
+              path: "https://youtu.be/yzANlfe1TVs?si=bDl8i7p15K0eQSJe",
             },
           ].map((highlight, index) => (
             <div
@@ -248,14 +251,14 @@ export function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Saiba Mais
+                    Assistir
                   </a>
                 ) : (
                   <Link
                     to={highlight.path}
                     className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
                   >
-                    Saiba Mais
+                    Assistir
                   </Link>
                 )}
               </div>
@@ -272,7 +275,7 @@ export function Home() {
       >
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl text-gray-800 text-left font-sans font-medium mb-8">
-            História da Cidade
+            Sobre o Primeiro Nome da Cidade
           </h2>
           <div className="text-white text-center font-medium bg-blue-400 p-6 rounded-lg shadow-md">
             <p className="mb-4">
@@ -287,7 +290,7 @@ export function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Saiba Mais sobre a Cidade
+              Saiba Mais sobre a História
             </a>
           </div>
         </div>
