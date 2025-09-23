@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Itacover from "/src/assets/images/Itacover.jpg"; // Exemplo: substitua pelas suas imagens
-import itaord from "/src/assets/images/itaord.png";
-import maracá from "/src/assets/images/maracá.jpg"; // Adicione mais imagens aqui
-import museuitaa from "/src/assets/images/museuitaa.jpeg";
-import sportIta from "/src/assets/images/sportIta.jpg";
+import Artefatosig from "/src/assets/images/Artefatosig.png";
+import Artefato4 from "/src/assets/images/Artefato4.png";
+import Artefato3 from "/src/assets/images/Artefato3.png";
+import Artefato5 from "/src/assets/images/Artefato5.png";
+import Artefato2 from "/src/assets/images/Artefato2.png";
+
+
 // Importe mais imagens conforme necessário
 
 // Tipos para os itens do acervo
@@ -38,7 +40,7 @@ export function AcervoOnline() {
       title: "Pedra Cheirosa - Artefato Indígena",
       description: "Réplica da lendária pedra que inspirou o nome de Itarema.",
       fullDescription: "Descoberta em maré baixa, esta pedra simboliza as raízes tupi da cidade. Feita de basalto com inscrições antigas.",
-      image: Itacover,
+      image: Artefatosig,
       category: "Artefatos",
       date: "Pré-colombiano",
     },
@@ -47,7 +49,7 @@ export function AcervoOnline() {
       title: "Documento de Fundação",
       description: "Registro histórico da fundação de Itarema em 1930.",
       fullDescription: "Assinado pelo prefeito local, este pergaminho detalha os primeiros assentamentos e tradições pesqueiras.",
-      image: itaord,
+      image: Artefato2, // Substitua pela sua imagem real
       category: "Documentos",
       date: "1930",
     },
@@ -56,7 +58,7 @@ export function AcervoOnline() {
       title: "Pintura de Pescadores",
       description: "Obra local retratando a vida cotidiana no litoral cearense.",
       fullDescription: "Pintada por artista de Itarema, captura a essência da cultura pesqueira com cores vibrantes e detalhes autênticos.",
-      image: maracá, // Substitua pela sua imagem real
+      image: Artefato4, // Substitua pela sua imagem real
       category: "Pinturas",
       date: "Século XX",
     },
@@ -66,7 +68,7 @@ export function AcervoOnline() {
       title: "Ferramentas Ancestrais",
       description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
       fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: museuitaa, // Adicione mais
+      image: Artefato3, // Adicione mais
       category: "Artefatos",
       date: "Século XVIII",
     },
@@ -75,7 +77,7 @@ export function AcervoOnline() {
       title: "Ferramentas Ancestrais",
       description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
       fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: sportIta, // Adicione mais
+      image: Artefato5, // Adicione mais
       category: "Artefatos",
       date: "Século XVIII",
     },
@@ -99,11 +101,11 @@ export function AcervoOnline() {
   const closeModal = () => setSelectedItem(null);
 
   return (
-    <div className="flex flex-col w-full items-center justify-center min-h-screen bg-gray-50">
+    <div className="flex flex-col w-full items-center justify-center min-h-screen bg-gray-100">
       {/* Hero Section */}
       <div className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden relative" data-aos="fade-up">
-        <img src={Itacover} alt="Capa do Acervo Online" className="w-full h-64 object-cover" />
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+        <img src={Artefatosig} alt="Capa do Acervo Online" className="w-full h-64 object-cover" />
+        <div className="absolute inset-0 flex items-center justify-center  bg-slate-800 text-white bg-opacity-40">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-4">Acervo Online do Museu Itaa</h1>
             <p className="text-lg mb-6">Explore a rica coleção cultural de Itarema de forma digital</p>
@@ -150,7 +152,7 @@ export function AcervoOnline() {
                   alt={item.title}
                   className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 flex items-end">
+                <div className="absolute inset-0  hover:bg-opacity-20 transition-opacity duration-300 flex items-end">
                   <p className="text-white p-4 opacity-0 hover:opacity-100 transition-opacity">{item.description}</p>
                 </div>
               </div>
