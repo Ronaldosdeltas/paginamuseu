@@ -2,12 +2,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Home } from "../src/home/index";
 import { Layout } from "./components/layout/layout";
-import { Historiaindigena } from "./culturaIndígena/historiaindigena";
+import { HistoriaIndigena } from "./culturaIndígena/historiaindigena";
 import { CulturaIndigena } from "./components/layout/culturaindigena";
-import { Acervooline } from "./museu/acervoonline";
+import { AcervoOnline } from "./museu/acervoonline";
 import { Arteindigena } from "./culturaIndígena/artindigena";
 import { Museu } from "./components/layout/museu";
-import { Tradicao } from "./culturaIndígena/tradição";
+import { Tradicoes } from "./culturaIndígena/tradição";
 import { Horarios } from "./visite/horarios";
 import { Localizacao } from "./visite/localização";
 import { Visite } from "./components/layout/visite";
@@ -38,8 +38,8 @@ const router = createBrowserRouter([
         path: "/culturaindigena",
         element: <CulturaIndigena />,
         children: [
-          { path: "historiaindigena", element: <Historiaindigena /> },
-          { path: "tradicao", element: <Tradicao /> },
+          { path: "historiaindigena", element: <HistoriaIndigena /> },
+          { path: "tradicao", element: <Tradicoes /> },
           { path: "arteindigena", element: <Arteindigena /> },
         ]
       },
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         path: "/museu",
         element: <Museu />,
         children: [
-          { path: "acervoonline", element: <Acervooline /> },
+          { path: "acervoonline", element: <AcervoOnline /> },
           { path: "boletins", element: <Boletins /> },
           { path: "pesquisaref", element: <Pesquisaref /> },
         ]

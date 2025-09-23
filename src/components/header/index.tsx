@@ -433,21 +433,21 @@ export function Header() {
             {isExposicoesOpen && (
               <div className="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-10">
                 <Link
-                  to="/programacao/atual"
+                  to="/museu/acervoonline"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsExposicoesOpen(false)}
                 >
                   Exposição Atual
                 </Link>
                 <Link
-                  to="/exposicoes/passadas"
+                  to="/museu/acervoonline"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsExposicoesOpen(false)}
                 >
                   Exposições Passadas
                 </Link>
                 <Link
-                  to="/exposicoes/eventos"
+                  to="/programacao/eventos"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
                   onClick={() => setIsExposicoesOpen(false)}
                 >
