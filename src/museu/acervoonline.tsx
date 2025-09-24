@@ -5,11 +5,11 @@ import "aos/dist/aos.css";
 
 // Método alternativo - usando require (se estiver usando CommonJS)
 
-import Artefato1 from "/src/assets/images/Artefato1.png";
-import Artefato2 from "/src/assets/images/Artefato2.png";
-import Artefato3 from "/src/assets/images/Artefato3.png";
-import Artefato4 from "/src/assets/images/Artefato4.png";
-import Artefato5 from "/src/assets/images/Artefato5.png"; 
+import colheres from "/src/assets/images/colheres.png";
+import maisarte from "/src/assets/images/maisarte.png";
+import vasilhas from "/src/assets/images/vasilhas.png";
+//import Artefato4 from "/src/assets/images/Artefato4.png";
+//import Artefato5 from "/src/assets/images/Artefato5.png"; 
 import Itacover from "/src/assets/images/Itacover.jpg";
 
 
@@ -46,7 +46,7 @@ export function AcervoOnline() {
       title: "Pedra Cheirosa - Artefato Indígena",
       description: "Réplica da lendária pedra que inspirou o nome de Itarema.",
       fullDescription: "Descoberta em maré baixa, esta pedra simboliza as raízes tupi da cidade. Feita de basalto com inscrições antigas.",
-      image: Artefato1, // Substitua pela sua imagem real
+      image: colheres, // Substitua pela sua imagem real
       category: "Artefatos",
       date: "Pré-colombiano",
     },
@@ -55,7 +55,7 @@ export function AcervoOnline() {
       title: "Documento de Fundação",
       description: "Registro histórico da fundação de Itarema em 1930.",
       fullDescription: "Assinado pelo prefeito local, este pergaminho detalha os primeiros assentamentos e tradições pesqueiras.",
-      image: Artefato2, // Substitua pela sua imagem real
+      image: maisarte, // Substitua pela sua imagem real
       category: "Documentos",
       date: "1930",
     },
@@ -64,11 +64,11 @@ export function AcervoOnline() {
       title: "Pintura de Pescadores",
       description: "Obra local retratando a vida cotidiana no litoral cearense.",
       fullDescription: "Pintada por artista de Itarema, captura a essência da cultura pesqueira com cores vibrantes e detalhes autênticos.",
-      image: Artefato3, // Substitua pela sua imagem real
+      image: vasilhas, // Substitua pela sua imagem real
       category: "Pinturas",
       date: "Século XX",
     },
-    
+    /*
     {
       id: 4,
       title: "Ferramentas Ancestrais",
@@ -87,7 +87,7 @@ export function AcervoOnline() {
       category: "Artefatos",
       date: "Século XVIII",
     },
-    
+    */
     // Adicione mais itens aqui com suas imagens...
   ];
 
