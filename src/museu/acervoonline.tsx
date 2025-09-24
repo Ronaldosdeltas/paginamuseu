@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Artefatosig from "/src/public/images/Artefatosig.png";
+import Artefato1 from "/src/public/images/Artefato1.png";
 import Artefato2 from "/src/public/images/Artefato2.png";
 import Artefato3 from "/src/public/images/Artefato3.png";
 import Artefato4 from "/src/public/images/Artefato4.png";
@@ -41,7 +41,7 @@ export function AcervoOnline() {
       title: "Pedra Cheirosa - Artefato Indígena",
       description: "Réplica da lendária pedra que inspirou o nome de Itarema.",
       fullDescription: "Descoberta em maré baixa, esta pedra simboliza as raízes tupi da cidade. Feita de basalto com inscrições antigas.",
-      image: Artefatosig, // Substitua pela sua imagem real
+      image: Artefato1, // Substitua pela sua imagem real
       category: "Artefatos",
       date: "Pré-colombiano",
     },
