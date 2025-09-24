@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Método alternativo - usando require (se estiver usando CommonJS)
-const Artefato1 = "../assets/images/Artefato1.png";
+import Artefato1 from "../assets/images/Artefato1.png";
 const Artefato2 = "../assets/images/Artefato2.png";
 const Artefato3 = "../assets/images/Artefato3.png";
 const Artefato4 = "../assets/images/Artefato4.png";
@@ -20,7 +20,7 @@ interface AcervoItem {
   title: string;
   description: string;
   fullDescription: string; // Para o modal
-  image: string; // URL da imagem
+  image: any; // URL da imagem
   category: string; // Ex.: "Artefatos", "Documentos", "Pinturas"
   date: string; // Ex.: "Século XIX"
 }
