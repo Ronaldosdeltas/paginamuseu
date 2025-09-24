@@ -175,7 +175,7 @@ export function Home() {
                 de Itarema. Venha visitar e mergulhe na arte e nas tradições locais.
               </p>
               <Link
-                to="/programacao/atual"
+                to="/museu/acervoonline"
                 className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
               >
                 Ver Exposições
