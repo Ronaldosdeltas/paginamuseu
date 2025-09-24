@@ -4,13 +4,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Método alternativo - usando require (se estiver usando CommonJS)
-/*
+
 import Artefato1 from "../assets/images/Artefato1.png";
 import Artefato2 from "../assets/images/Artefato2.png";
 import Artefato3 from "../assets/images/Artefato3.png";
 import Artefato4 from "../assets/images/Artefato4.png";
 import Artefato5 from "../assets/images/Artefato5.png"; 
-*/
+
 
 
 
@@ -110,7 +110,7 @@ export function AcervoOnline() {
     <div className="flex flex-col w-full items-center justify-center min-h-screen bg-gray-100">
       {/* Hero Section */}
       <div className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden relative" data-aos="fade-up">
-        <img src= "/images/Artefatosig.png" alt="Capa do Acervo Online" className="w-full h-64 object-cover" />
+        <img src= "/images/Artefato1.png" alt="Capa do Acervo Online" className="w-full h-64 object-cover" />
         <div className="absolute inset-0 flex items-center justify-center  bg-slate-800 text-white bg-opacity-40">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-4">Acervo Online do Museu Itaa</h1>
