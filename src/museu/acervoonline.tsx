@@ -7,8 +7,8 @@ import "aos/dist/aos.css";
 
 import Itacover from "../assets/images/Itacover.jpg";
 import Itachitão from "../assets/images/itachitão.jpeg";
-import maracá from "../assets/images/Maracá.png";
-import sportIta from "../assets/images/SportIta.png";
+import maracá from "../assets/images/maracá.png";
+import sportIta from "../assets/images/sportIta.png";
 import itaord from "../assets/images/itaord.png"; 
 
 
