@@ -254,7 +254,7 @@ export function Header() {
                       onClick={(e) => {
                         e.stopPropagation();
                         console.log("Navegando para /exposicoes/eventos");
-                        handleMobileNav("/exposicoes/eventos");
+                        handleMobileNav("/programacao/eventos");
                       }}
                     >
                       Eventos Futuros
