@@ -43,7 +43,7 @@ export function AcervoOnline() {
       title: "Pedra Cheirosa - Artefato Indígena",
       description: "Réplica da lendária pedra que inspirou o nome de Itarema.",
       fullDescription: "Descoberta em maré baixa, esta pedra simboliza as raízes tupi da cidade. Feita de basalto com inscrições antigas.",
-      image: Artefato1, // Substitua pela sua imagem real
+      image: "../../public/images/Artefato1.png", // Substitua pela sua imagem real
       category: "Artefatos",
       date: "Pré-colombiano",
     },
@@ -52,7 +52,7 @@ export function AcervoOnline() {
       title: "Documento de Fundação",
       description: "Registro histórico da fundação de Itarema em 1930.",
       fullDescription: "Assinado pelo prefeito local, este pergaminho detalha os primeiros assentamentos e tradições pesqueiras.",
-      image: Artefato2, // Substitua pela sua imagem real
+      image: "../../public/images/Artefato2.png", // Substitua pela sua imagem real
       category: "Documentos",
       date: "1930",
     },
@@ -61,7 +61,7 @@ export function AcervoOnline() {
       title: "Pintura de Pescadores",
       description: "Obra local retratando a vida cotidiana no litoral cearense.",
       fullDescription: "Pintada por artista de Itarema, captura a essência da cultura pesqueira com cores vibrantes e detalhes autênticos.",
-      image: Artefato3, // Substitua pela sua imagem real
+      image: "../../public/images/Artefato3.png", // Substitua pela sua imagem real
       category: "Pinturas",
       date: "Século XX",
     },
@@ -71,7 +71,7 @@ export function AcervoOnline() {
       title: "Ferramentas Ancestrais",
       description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
       fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: Artefato4, // Adicione mais
+      image: "../../public/images/Artefato4.png", // Adicione mais
       category: "Artefatos",
       date: "Século XVIII",
     },
@@ -80,7 +80,7 @@ export function AcervoOnline() {
       title: "Ferramentas Ancestrais",
       description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
       fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: Artefato5, // Adicione mais
+      image: "../../public/images/Artefato5.png", // Adicione mais
       category: "Artefatos",
       date: "Século XVIII",
     },
