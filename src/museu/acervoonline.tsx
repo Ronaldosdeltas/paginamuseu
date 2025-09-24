@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Método alternativo - usando require (se estiver usando CommonJS)
-
+// Imagens do acervo
 import Artefato1 from "/src/assets/images/Artefato1.png";
 import Artefato2 from "/src/assets/images/Artefato2.png";
 import Artefato3 from "/src/assets/images/Artefato3.png";
@@ -18,10 +17,10 @@ interface AcervoItem {
   id: number;
   title: string;
   description: string;
-  fullDescription: string; // Para o modal
-  image: any; // URL da imagem
-  category: string; // Ex.: "Artefatos", "Documentos", "Pinturas"
-  date: string; // Ex.: "Século XIX"
+  fullDescription: string; 
+  image: any; 
+  category: string; 
+  date: string; 
 }
 
 export function AcervoOnline() {
@@ -35,14 +34,13 @@ export function AcervoOnline() {
     });
   }, []);
 
-  // Dados do acervo (adicione mais itens com suas imagens reais)
   const acervoItems: AcervoItem[] = [
     {
       id: 1,
       title: "Pedra Cheirosa - Artefato Indígena",
       description: "Réplica da lendária pedra que inspirou o nome de Itarema.",
       fullDescription: "Descoberta em maré baixa, esta pedra simboliza as raízes tupi da cidade. Feita de basalto com inscrições antigas.",
-      image: Artefato1, // Substitua pela sua imagem real
+      image: Artefato1, 
       category: "Artefatos",
       date: "Pré-colombiano",
     },
@@ -52,7 +50,7 @@ export function AcervoOnline() {
       title: "Documento de Fundação",
       description: "Registro histórico da fundação de Itarema em 1930.",
       fullDescription: "Assinado pelo prefeito local, este pergaminho detalha os primeiros assentamentos e tradições pesqueiras.",
-      image: Artefato2, // Substitua pela sua imagem real
+      image: Artefato2, 
       category: "Documentos",
       date: "1930",
     },
@@ -61,7 +59,7 @@ export function AcervoOnline() {
       title: "Pintura de Pescadores",
       description: "Obra local retratando a vida cotidiana no litoral cearense.",
       fullDescription: "Pintada por artista de Itarema, captura a essência da cultura pesqueira com cores vibrantes e detalhes autênticos.",
-      image: Artefato3, // Substitua pela sua imagem real
+      image: Artefato3, 
       category: "Pinturas",
       date: "Século XX",
     },
@@ -86,7 +84,7 @@ export function AcervoOnline() {
       date: "Século XVIII",
     },
     
-    // Adicione mais itens aqui com suas imagens...
+    
   ];
 
   const [selectedItem, setSelectedItem] = useState<AcervoItem | null>(null); // Para o modal
@@ -213,8 +211,8 @@ export function AcervoOnline() {
             <p>Rua Principal, 123, Centro - Itarema, CE</p>
           </div>
           <div className="flex space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">Instagram</a>
+            <a href="https://www.itarema.ce.gov.br/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">Prefeitura Municipal</a>
+            <a href="https://www.instagram.com/itaremaordinariaof/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">Instagram</a>
           </div>
         </div>
         <div className="max-w-5xl mx-auto mt-4 text-center text-sm">

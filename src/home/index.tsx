@@ -391,15 +391,15 @@ export function Home() {
           {/* Redes Sociais */}
           <div className="flex space-x-4">
             <a
-              href="https://facebook.com"
+              href="https://www.itarema.ce.gov.br/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-amber-300"
             >
-              Facebook
+              Prefeitura Municipal
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/itaremaordinariaof/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-amber-300"

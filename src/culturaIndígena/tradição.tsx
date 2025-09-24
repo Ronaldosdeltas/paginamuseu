@@ -140,8 +140,8 @@ export function Tradicoes() {
             <p>Rua Principal, 123, Centro - Itarema, CE</p>
           </div>
           <div className="flex space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">Instagram</a>
+            <a href="https://www.itarema.ce.gov.br/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">Prefeitura Municipal</a>
+            <a href="https://www.instagram.com/itaremaordinariaof/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300">Instagram</a>
           </div>
         </div>
         <div className="max-w-5xl mx-auto mt-4 text-center text-sm">

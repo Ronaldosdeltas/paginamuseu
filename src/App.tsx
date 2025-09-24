@@ -22,7 +22,6 @@ import { Apoie } from "./components/layout/apoie";
 import { Doacao } from "./apoie/doacao";
 import { Parcerias } from "./apoie/parcerias";
 import { Voluntariado } from "./apoie/voluntariado";
-import { Dia7setembro } from "./videos/dia7setembro";
 
 const router = createBrowserRouter([
 
@@ -83,11 +82,7 @@ const router = createBrowserRouter([
     { path: "tickets", element: <Tickets />},
   ],
 },
-      {
-        path: "/videos",
-        element: <Dia7setembro />,
-      },  
-    
+     
     ]
   }
 ])

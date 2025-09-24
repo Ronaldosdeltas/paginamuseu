@@ -10,7 +10,7 @@ export function Header() {
   const [isExposicoesOpen, setIsExposicoesOpen] = useState(false);
   const [isVisiteOpen, setIsVisiteOpen] = useState(false);
   const [isApoieOpen, setIsApoieOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false); // Novo estado para detectar scroll
+  const [isScrolled, setIsScrolled] = useState(false); //estado para detectar scroll
 
   const acervoRef = useRef<HTMLDivElement>(null);
   const culturaRef = useRef<HTMLDivElement>(null);
