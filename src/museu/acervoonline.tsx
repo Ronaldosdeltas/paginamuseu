@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Artefatosig from "/src/assets/images/Artefatosig.png";
-import Artefato4 from "/src/assets/images/Artefato4.png";
-import Artefato3 from "/src/assets/images/Artefato3.png";
-import Artefato5 from "/src/assets/images/Artefato5.png";
-import Artefato2 from "/src/assets/images/Artefato2.png";
+import Artefatosig from "../assets/images/Artefatosig.png";
+import Artefato4 from "../assets/images/Artefato4.png";
+import Artefato3 from "../assets/images/Artefato3.png";
+import Artefato5 from "../assets/images/Artefato5.png";
+import Artefato2 from "../assets/images/Artefato2.png";
 
 
 // Importe mais imagens conforme necessário
