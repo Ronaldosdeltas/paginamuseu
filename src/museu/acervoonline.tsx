@@ -4,11 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Método alternativo - usando require (se estiver usando CommonJS)
-const Artefato1 = "/images/Artefato1.png";
-const Artefato2 = "/images/Artefato2.png";
-const Artefato3 = "/images/Artefato3.png";
-const Artefato4 = "/images/Artefato4.png";
-const Artefato5 = "/images/Artefato5.png";
+const Artefato1 = "../../public/images/Artefato1.png";
+const Artefato2 = "../../public/images/Artefato2.png";
+const Artefato3 = "../../public/images/Artefato3.png";
+const Artefato4 = "../../public/images/Artefato4.png";
+const Artefato5 = "../../public/images/Artefato5.png";
 
 
 
