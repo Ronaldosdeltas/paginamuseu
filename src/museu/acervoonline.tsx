@@ -3,11 +3,12 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Artefato1 from "/images/Artefato1.png";
-import Artefato2 from "/images/Artefato2.png";
-import Artefato3 from "/images/Artefato3.png";
-import Artefato4 from "/images/Artefato4.png";
-import Artefato5 from"/images/Artefato5.png";
+// Método alternativo - usando require (se estiver usando CommonJS)
+const Artefato1 = "/images/Artefato1.png";
+const Artefato2 = "/images/Artefato2.png";
+const Artefato3 = "/images/Artefato3.png";
+const Artefato4 = "/images/Artefato4.png";
+const Artefato5 = "/images/Artefato5.png";
 
 
 
@@ -19,7 +20,7 @@ interface AcervoItem {
   title: string;
   description: string;
   fullDescription: string; // Para o modal
-  image: any;
+  image: string; // URL da imagem
   category: string; // Ex.: "Artefatos", "Documentos", "Pinturas"
   date: string; // Ex.: "Século XIX"
 }
