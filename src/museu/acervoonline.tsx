@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import colheres from "/src/assets/images/colheres.png";
 import maisarte from "/src/assets/images/maisarte.png";
 import vasilhas from "/src/assets/images/vasilhas.png";
-//import Artefato4 from "/src/assets/images/Artefato4.png";
+import artefatos from "/src/assets/images/artefatos.png";
 //import Artefato5 from "/src/assets/images/Artefato5.png"; 
 import Itacover from "/src/assets/images/Itacover.jpg";
 
@@ -68,16 +68,17 @@ export function AcervoOnline() {
       category: "Pinturas",
       date: "Século XX",
     },
-    /*
+    
     {
       id: 4,
       title: "Ferramentas Ancestrais",
       description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
       fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: Artefato4, // Adicione mais
+      image: artefatos, // Adicione mais
       category: "Artefatos",
       date: "Século XVIII",
     },
+     /*
       {
       id: 5,
       title: "Ferramentas Ancestrais",
