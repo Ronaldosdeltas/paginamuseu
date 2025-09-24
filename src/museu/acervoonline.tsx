@@ -6,9 +6,9 @@ import "aos/dist/aos.css";
 // Método alternativo - usando require (se estiver usando CommonJS)
 
 import colheres from "/src/assets/images/colheres.png";
-import maisarte from "/src/assets/images/maisarte.png";
-import vasilhas from "/src/assets/images/vasilhas.png";
-import artefatos from "/src/assets/images/artefatos.png";
+//import maisarte from "/src/assets/images/maisarte.png";
+//import vasilhas from "/src/assets/images/vasilhas.png";
+//import artefatos from "/src/assets/images/artefatos.png";
 //import Artefato5 from "/src/assets/images/Artefato5.png"; 
 import Itacover from "/src/assets/images/Itacover.jpg";
 
@@ -50,6 +50,7 @@ export function AcervoOnline() {
       category: "Artefatos",
       date: "Pré-colombiano",
     },
+    /*
     {
       id: 2,
       title: "Documento de Fundação",
