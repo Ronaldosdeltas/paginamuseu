@@ -5,11 +5,11 @@ import "aos/dist/aos.css";
 
 // Método alternativo - usando require (se estiver usando CommonJS)
 
-import Itacover from "../assets/images/Itacover.jpg";
-import Itachitão from "../assets/images/itachitão.jpeg";
-import maracá from "../assets/images/maracá.png";
-import sportIta from "../assets/images/sportIta.png";
-import itaord from "../assets/images/itaord.png"; 
+import Itacover from "/src/assets/images/Itacover.jpg";
+import Itachitão from "/src/assets/images/itachitão.jpeg";
+import maracá from "/src/assets/images/maracá.jpg";
+import sportIta from "/src/assets/images/sportIta.jpg";
+import itaord from "/src/assets/images/itaord.png"; 
 
 
 
@@ -110,7 +110,7 @@ export function AcervoOnline() {
     <div className="flex flex-col w-full items-center justify-center min-h-screen bg-gray-100">
       {/* Hero Section */}
       <div className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden relative" data-aos="fade-up">
-        <img src= "/images/Artefato1.png" alt="Capa do Acervo Online" className="w-full h-64 object-cover" />
+        <img src= {Itacover} alt="Capa do Acervo Online" className="w-full h-64 object-cover" />
         <div className="absolute inset-0 flex items-center justify-center  bg-slate-800 text-white bg-opacity-40">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-4">Acervo Online do Museu Itaa</h1>
