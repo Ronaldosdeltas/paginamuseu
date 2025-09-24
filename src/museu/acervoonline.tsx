@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Artefatosig from "../public/images/Artefatosig.png";
-import Artefato4 from "../public/images/Artefato4.png";
-import Artefato3 from "../public/images/Artefato3.png";
-import Artefato5 from "../public/images/Artefato5.png";
-import Artefato2 from "../public/images/Artefato2.png";
+import Artefatosig from "/src/public/images/Artefatosig.png";
+import Artefato2 from "/src/public/images/Artefato2.png";
+import Artefato3 from "/src/public/images/Artefato3.png";
+import Artefato4 from "/src/public/images/Artefato4.png";
+import Artefato5 from "/src/public/images/Artefato5.png";
+
 
 
 // Importe mais imagens conforme necessário
@@ -40,7 +41,7 @@ export function AcervoOnline() {
       title: "Pedra Cheirosa - Artefato Indígena",
       description: "Réplica da lendária pedra que inspirou o nome de Itarema.",
       fullDescription: "Descoberta em maré baixa, esta pedra simboliza as raízes tupi da cidade. Feita de basalto com inscrições antigas.",
-      image: Artefatosig,
+      image: Artefatosig, // Substitua pela sua imagem real
       category: "Artefatos",
       date: "Pré-colombiano",
     },
@@ -104,7 +105,7 @@ export function AcervoOnline() {
     <div className="flex flex-col w-full items-center justify-center min-h-screen bg-gray-100">
       {/* Hero Section */}
       <div className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden relative" data-aos="fade-up">
-        <img src={Artefatosig} alt="Capa do Acervo Online" className="w-full h-64 object-cover" />
+        <img src= "/images/Artefatosig.png" alt="Capa do Acervo Online" className="w-full h-64 object-cover" />
         <div className="absolute inset-0 flex items-center justify-center  bg-slate-800 text-white bg-opacity-40">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-4">Acervo Online do Museu Itaa</h1>
