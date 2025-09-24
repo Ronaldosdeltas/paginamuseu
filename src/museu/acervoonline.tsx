@@ -5,11 +5,11 @@ import "aos/dist/aos.css";
 
 // Método alternativo - usando require (se estiver usando CommonJS)
 
-import Artefato1 from "../assets/images/Artefato1.png";
-import Artefato2 from "../assets/images/Artefato2.png";
-import Artefato3 from "../assets/images/Artefato3.png";
-import Artefato4 from "../assets/images/Artefato4.png";
-import Artefato5 from "../assets/images/Artefato5.png"; 
+import Itacover from "../assets/images/Itacover.jpg";
+import Itachitão from "../assets/images/itachitão.jpeg";
+import maracá from "../assets/images/Maracá.png";
+import sportIta from "../assets/images/SportIta.png";
+import itaord from "../assets/images/itaord.png"; 
 
 
 
@@ -45,7 +45,7 @@ export function AcervoOnline() {
       title: "Pedra Cheirosa - Artefato Indígena",
       description: "Réplica da lendária pedra que inspirou o nome de Itarema.",
       fullDescription: "Descoberta em maré baixa, esta pedra simboliza as raízes tupi da cidade. Feita de basalto com inscrições antigas.",
-      image: "/images/Artefato1.png", // Substitua pela sua imagem real
+      image: Itacover, // Substitua pela sua imagem real
       category: "Artefatos",
       date: "Pré-colombiano",
     },
@@ -54,7 +54,7 @@ export function AcervoOnline() {
       title: "Documento de Fundação",
       description: "Registro histórico da fundação de Itarema em 1930.",
       fullDescription: "Assinado pelo prefeito local, este pergaminho detalha os primeiros assentamentos e tradições pesqueiras.",
-      image: "/images/Artefato2.png", // Substitua pela sua imagem real
+      image: Itachitão, // Substitua pela sua imagem real
       category: "Documentos",
       date: "1930",
     },
@@ -63,7 +63,7 @@ export function AcervoOnline() {
       title: "Pintura de Pescadores",
       description: "Obra local retratando a vida cotidiana no litoral cearense.",
       fullDescription: "Pintada por artista de Itarema, captura a essência da cultura pesqueira com cores vibrantes e detalhes autênticos.",
-      image: "/images/Artefato3.png", // Substitua pela sua imagem real
+      image: maracá, // Substitua pela sua imagem real
       category: "Pinturas",
       date: "Século XX",
     },
@@ -73,7 +73,7 @@ export function AcervoOnline() {
       title: "Ferramentas Ancestrais",
       description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
       fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: "/images/Artefato4.png", // Adicione mais
+      image: sportIta, // Adicione mais
       category: "Artefatos",
       date: "Século XVIII",
     },
@@ -82,7 +82,7 @@ export function AcervoOnline() {
       title: "Ferramentas Ancestrais",
       description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
       fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: "/images/Artefato5.png", // Adicione mais
+      image: itaord, // Adicione mais
       category: "Artefatos",
       date: "Século XVIII",
     },
