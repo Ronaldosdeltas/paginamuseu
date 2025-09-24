@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Artefato1 from "../../public/images/Artefato1.png";
-import Artefato2 from "../../public/images/Artefato2.png";
-import Artefato3 from "../../public/images/Artefato3.png";
-import Artefato4 from "../../public/images/Artefato4.png";
-import Artefato5 from"../../public/images/Artefato5.png";
+import Artefato1 from "/images/Artefato1.png";
+import Artefato2 from "/images/Artefato2.png";
+import Artefato3 from "/images/Artefato3.png";
+import Artefato4 from "/images/Artefato4.png";
+import Artefato5 from"/images/Artefato5.png";
 
 
 
@@ -19,7 +19,7 @@ interface AcervoItem {
   title: string;
   description: string;
   fullDescription: string; // Para o modal
-  image: string;
+  image: any;
   category: string; // Ex.: "Artefatos", "Documentos", "Pinturas"
   date: string; // Ex.: "Século XIX"
 }
