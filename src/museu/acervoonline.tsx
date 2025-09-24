@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Artefatosig from "../assets/images/Artefatosig.png";
-import Artefato4 from "../assets/images/Artefato4.png";
-import Artefato3 from "../assets/images/Artefato3.png";
-import Artefato5 from "../assets/images/Artefato5.png";
-import Artefato2 from "../assets/images/Artefato2.png";
+import Artefatosig from "../public/images/Artefatosig.png";
+import Artefato4 from "../public/images/Artefato4.png";
+import Artefato3 from "../public/images/Artefato3.png";
+import Artefato5 from "../public/images/Artefato5.png";
+import Artefato2 from "../public/images/Artefato2.png";
 
 
 // Importe mais imagens conforme necessário
@@ -58,7 +58,7 @@ export function AcervoOnline() {
       title: "Pintura de Pescadores",
       description: "Obra local retratando a vida cotidiana no litoral cearense.",
       fullDescription: "Pintada por artista de Itarema, captura a essência da cultura pesqueira com cores vibrantes e detalhes autênticos.",
-      image: Artefato4, // Substitua pela sua imagem real
+      image: Artefato3, // Substitua pela sua imagem real
       category: "Pinturas",
       date: "Século XX",
     },
@@ -68,7 +68,7 @@ export function AcervoOnline() {
       title: "Ferramentas Ancestrais",
       description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
       fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: Artefato3, // Adicione mais
+      image: Artefato4, // Adicione mais
       category: "Artefatos",
       date: "Século XVIII",
     },
