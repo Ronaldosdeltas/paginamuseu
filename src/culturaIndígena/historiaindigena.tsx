@@ -43,7 +43,7 @@ export function HistoriaIndigena() {
       {/* Hero Section */}
       <div className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden relative" data-aos="fade-up">
         <img src={Itacover} alt="História Indígena de Itarema" className="w-full h-64 object-cover" />
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+        <div className="absolute inset-0 flex items-center justify-center  bg-slate-700 text-white bg-opacity-40">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-4">História Indígena de Itarema</h1>
             <p className="text-lg mb-6">Conheça a rica herança dos povos Tremembé e sua influência na cultura local.</p>

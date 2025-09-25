@@ -143,36 +143,17 @@ export function Header() {
                 </button>
                 {isAcervoOpen && (
                   <div className="mt-2 space-y-2">
+             
                     <button
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
                       onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Navegando para /museu/pesquisaref");
-                        handleMobileNav("/museu/pesquisaref");
-                      }}
-                    >
-                      Pesquisa e Referência
-                    </button>
-                    <button
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        console.log("Navegando para /museu/acervoonline");
                         handleMobileNav("/museu/acervoonline");
                       }}
                     >
                       Acervo Online
                     </button>
-                    <button
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        console.log("Navegando para /museu/boletins");
-                        handleMobileNav("/museu/boletins");
-                      }}
-                    >
-                      Boletins do Acervo
-                    </button>
+
                   </div>
                 )}
               </div>
@@ -190,7 +171,6 @@ export function Header() {
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
                       onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Navegando para /culturaindigena/historiaindigena");
                         handleMobileNav("/culturaindigena/historiaindigena");
                       }}
                     >
@@ -200,22 +180,12 @@ export function Header() {
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
                       onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Navegando para /culturaindigena/tradicao");
                         handleMobileNav("/culturaindigena/tradicao");
                       }}
                     >
                       Tradições
                     </button>
-                    <button
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        console.log("Navegando para /culturaindigena/arteindigena");
-                        handleMobileNav("/culturaindigena/arteindigena");
-                      }}
-                    >
-                      Arte Indígena
-                    </button>
+                 
                   </div>
                 )}
               </div>
@@ -233,7 +203,6 @@ export function Header() {
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
                       onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Navegando para /programacao/atual");
                         handleMobileNav("/programacao/atual");
                       }}
                     >
@@ -243,7 +212,6 @@ export function Header() {
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
                       onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Navegando para /exposicoes/passadas");
                         handleMobileNav("/exposicoes/passadas");
                       }}
                     >
@@ -253,7 +221,6 @@ export function Header() {
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
                       onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Navegando para /exposicoes/eventos");
                         handleMobileNav("/programacao/eventos");
                       }}
                     >
@@ -276,7 +243,6 @@ export function Header() {
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
                       onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Navegando para /visite/horarios");
                         handleMobileNav("/visite/horarios");
                       }}
                     >
@@ -286,22 +252,13 @@ export function Header() {
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
                       onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Navegando para /visite/localizacao");
                         handleMobileNav("/visite/localizacao");
                       }}
                     >
                       Localização
                     </button>
-                    <button
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        console.log("Navegando para /visite/tickets");
-                        handleMobileNav("/visite/tickets");
-                      }}
-                    >
-                      Compra de Tickets
-                    </button>
+                    
+                    
                   </div>
                 )}
               </div>
@@ -319,32 +276,12 @@ export function Header() {
                       className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
                       onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Navegando para /apoie/doacao");
                         handleMobileNav("/apoie/doacao");
                       }}
                     >
                       Faça uma Doação
                     </button>
-                    <button
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        console.log("Navegando para /apoie/parcerias");
-                        handleMobileNav("/apoie/parcerias");
-                      }}
-                    >
-                      Parcerias
-                    </button>
-                    <button
-                      className="block px-4 py-2 text-amber-50 hover:bg-gray-700 text-left w-full"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        console.log("Navegando para /apoie/voluntariado");
-                        handleMobileNav("/apoie/voluntariado");
-                      }}
-                    >
-                      Voluntariado
-                    </button>
+               
                   </div>
                 )}
               </div>
@@ -364,13 +301,7 @@ export function Header() {
             </button>
             {isAcervoOpen && (
               <div className="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-10">
-                <Link
-                  to="/museu/pesquisaref"
-                  className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                  onClick={() => setIsAcervoOpen(false)}
-                >
-                  Pesquisa e Referência
-                </Link>
+             
                 <Link
                   to="/museu/acervoonline"
                   className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
@@ -378,13 +309,7 @@ export function Header() {
                 >
                   Acervo Online
                 </Link>
-                <Link
-                  to="/museu/boletins"
-                  className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                  onClick={() => setIsAcervoOpen(false)}
-                >
-                  Boletins do Acervo
-                </Link>
+             
               </div>
             )}
           </div>
@@ -412,13 +337,7 @@ export function Header() {
                 >
                   Tradições
                 </Link>
-                <Link
-                  to="/culturaindigena/arteindigena"
-                  className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                  onClick={() => setIsCulturaOpen(false)}
-                >
-                  Arte Indígena
-                </Link>
+           
               </div>
             )}
           </div>
@@ -480,13 +399,7 @@ export function Header() {
                 >
                   Localização
                 </Link>
-                <Link
-                  to="/visite/tickets"
-                  className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                  onClick={() => setIsVisiteOpen(false)}
-                >
-                  Compra de Tickets
-                </Link>
+               
               </div>
             )}
           </div>
@@ -507,20 +420,7 @@ export function Header() {
                 >
                   Faça uma Doação
                 </Link>
-                <Link
-                  to="/apoie/parcerias"
-                  className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                  onClick={() => setIsApoieOpen(false)}
-                >
-                  Parcerias
-                </Link>
-                <Link
-                  to="/apoie/voluntariado"
-                  className="block px-4 py-2 text-amber-50 hover:bg-gray-700"
-                  onClick={() => setIsApoieOpen(false)}
-                >
-                  Voluntariado
-                </Link>
+              
               </div>
             )}
           </div>

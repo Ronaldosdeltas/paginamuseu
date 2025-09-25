@@ -46,7 +46,7 @@ export function Tradicoes() {
       {/* Hero Section */}
       <div className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden relative" data-aos="fade-up">
         <img src={itaord} alt="Tradições de Itarema" className="w-full h-64 object-cover" />
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+        <div className="absolute inset-0 flex items-center justify-center bg-slate-700 text-white bg-opacity-40">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-4">Tradições de Itarema</h1>
             <p className="text-lg mb-6">Celebre as práticas culturais que tornam Itarema única.</p>

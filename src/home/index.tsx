@@ -10,26 +10,24 @@ import sportIta from "/src/assets/images/sportIta.jpg";
 import itachitão from "/src/assets/images/itachitão.jpeg";
 import paroquiaitarema from "/src/assets/images/paroquiaitarema.avif";
 import IgrejaAlmofala from "/src/assets/images/IgrejaAlmofala.jpg";
-//import AnimatedBackground from "../components/animatedbg/animatedbackground";
 
 export function Home() {
   // Inicializar AOS
   useEffect(() => {
     AOS.init({
-      duration: 600, // Duração da animação em milissegundos
-      easing: "ease-in-out", // Tipo de suavização
-      mirror: true, // Reverte a animação ao sair do viewport
-      anchorPlacement: "top-bottom", // Dispara a animação quando o topo da seção atinge a parte inferior do viewport
+      duration: 600,
+      easing: "ease-in-out",
+      mirror: true,
+      anchorPlacement: "top-bottom",
     });
   }, []);
 
-  // Imagem estática no topo
+  // Estado para o carrossel e seções expansíveis
   const staticImage = {
     src: Itacover,
     alt: "Imagem de capa do Museu Itaa",
   };
 
-  // Imagens para o carrossel
   const carouselImages = [
     {
       src: sportIta,
@@ -52,14 +50,16 @@ export function Home() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMuseumExpanded, setIsMuseumExpanded] = useState(false);
+  const [isHistoryExpanded, setIsHistoryExpanded] = useState(false); // Novo estado para a história
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Muda a imagem a cada 5 segundos
-    return () => clearInterval(interval); // Limpa o intervalo ao desmontar
+    }, 5000);
+    return () => clearInterval(interval);
   }, [carouselImages.length]);
 
   const goToNext = () => {
@@ -89,70 +89,70 @@ export function Home() {
         />
       </div>
 
-      {/* Carrossel abaixo da imagem estática */}
+      {/* Carrossel */}
       <div className="w-full bg-gray-200 flex justify-center items-center mt-3 rounded-lg shadow-lg">
-      <div
-        className="max-w-100 mx-auto mt-20 relative z-10"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <h2 className="text-3xl font-medium text-gray-800 text-center mb-4">
-          Notícias Atuais
-        </h2>
-        <div className="relative w-full max-w-5xl mx-auto mt-0 overflow-hidden mb-10 rounded-lg shadow-lg">
-          <button
-            onClick={goToPrev}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
-            aria-label="Imagem anterior"
-          >
-            <AiOutlineLeft />
-          </button>
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {carouselImages.map((image, index) => (
-              <Link
-                to={image.path}
-                key={index}
-                className="w-full flex-shrink-0 relative"
-                target={image.path.startsWith("http") ? "_blank" : undefined}
-                rel={image.path.startsWith("http") ? "noopener noreferrer" : undefined}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover"
-                />
-                {index === currentIndex && (
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
-                    {image.caption}
-                  </div>
-                )}
-              </Link>
-            ))}
-          </div>
-          <button
-            onClick={goToNext}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
-            aria-label="Próxima imagem"
-          >
-            <AiOutlineRight />
-          </button>
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {carouselImages.map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full ${
-                  currentIndex === index ? "bg-white" : "bg-gray-400"
-                }`}
-                onClick={() => setCurrentIndex(index)}
-                aria-label={`Ir para imagem ${index + 1}`}
-              ></button>
-            ))}
+        <div
+          className="max-w-100 mx-auto mt-20 relative z-10"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h2 className="text-3xl font-medium text-gray-800 text-center mb-4">
+            Notícias Atuais
+          </h2>
+          <div className="relative w-full max-w-5xl mx-auto mt-0 overflow-hidden mb-10 rounded-lg shadow-lg">
+            <button
+              onClick={goToPrev}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
+              aria-label="Imagem anterior"
+            >
+              <AiOutlineLeft />
+            </button>
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {carouselImages.map((image, index) => (
+                <Link
+                  to={image.path}
+                  key={index}
+                  className="w-full flex-shrink-0 relative"
+                  target={image.path.startsWith("http") ? "_blank" : undefined}
+                  rel={image.path.startsWith("http") ? "noopener noreferrer" : undefined}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  {index === currentIndex && (
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+                      {image.caption}
+                    </div>
+                  )}
+                </Link>
+              ))}
+            </div>
+            <button
+              onClick={goToNext}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-amber-50 rounded-full text-black text-3xl z-10 hover:text-amber-300"
+              aria-label="Próxima imagem"
+            >
+              <AiOutlineRight />
+            </button>
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-3 h-3 rounded-full ${
+                    currentIndex === index ? "bg-white" : "bg-gray-400"
+                  }`}
+                  onClick={() => setCurrentIndex(index)}
+                  aria-label={`Ir para imagem ${index + 1}`}
+                ></button>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
       </div>
 
       {/* Seção de Programação */}
@@ -279,11 +279,40 @@ export function Home() {
           </h2>
           <div className="text-white text-center font-medium bg-blue-400 p-6 rounded-lg shadow-md">
             <p className="mb-4">
-              A cidade de Itarema é uma alusão ao nome dado pelos índios por causa
-              de uma pedra com forma de obelisco em alto mar que só era visível em
-              maré baixa. Este vem do tupi ita (pedra), rema (cheiro agradável) e
-              significa pedra de cheiro agradável ou pedra cheirosa.
+              {isHistoryExpanded ? (
+                <>
+                  A cidade de Itarema é uma alusão ao nome dado pelos índios por causa
+                  de uma pedra com forma de obelisco em alto mar que só era visível em
+                  maré baixa. Este vem do tupi ita (pedra), rema (cheiro agradável) e
+                  significa pedra de cheiro agradável ou pedra cheirosa.
+                  Sua denominação original era Tanque do Meio e, desde 1937, Itarema.
+                  As terras às margens do rio Aracatiaçu eram habitadas pelos índios 
+                  Tremembé, antes da chegada das entradas de franceses e portugueses,
+                  bem como das missões religiosas portugueses que tinham como intuito a
+                  catequização dos indígenas.
+                </>
+              ) : (
+                <>
+                  A cidade de Itarema é uma alusão ao nome dado pelos índios por causa
+                  de uma pedra com forma de obelisco em alto mar que só era visível em
+                  maré baixa...{" "}
+                  <button
+                    onClick={() => setIsHistoryExpanded(true)}
+                    className="text-amber-300 hover:text-amber-200 underline"
+                  >
+                    Continuar Lendo
+                  </button>
+                </>
+              )}
             </p>
+            {isHistoryExpanded && (
+              <button
+                onClick={() => setIsHistoryExpanded(false)}
+                className="text-amber-300 hover:text-amber-200 underline px-3 mb-4"
+              >
+                Recolher
+              </button>
+            )}
             <a
               href="https://itaremaprevi.com.br/institucional/conheca-a-cidade/"
               className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
@@ -291,6 +320,54 @@ export function Home() {
               rel="noopener noreferrer"
             >
               Saiba Mais sobre a História
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Seção de Sobre o Museu */}
+      <div
+        className="bg-gray-100 py-12 px-5 md:px-10 m-4 rounded-lg shadow-lg"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl text-gray-800 text-left font-sans font-medium mb-8">
+            Sobre o Museu Vicente de Paula Rios
+          </h2>
+          <div className="text-white text-center font-medium bg-blue-400 p-6 rounded-lg shadow-md">
+            <p className="mb-4">
+              {isMuseumExpanded ? (
+                <>
+                  O Museu Vicente de Paula Rios, localizado no coração de Itarema, é um espaço dedicado à preservação e divulgação da rica história e cultura local. Fundado em 1990, o museu abriga uma coleção diversificada que inclui artefatos indígenas, objetos históricos e exposições que retratam a evolução da cidade, desde suas raízes indígenas até os dias atuais. O nome do museu homenageia Vicente de Paula Rios, uma figura ilustre da região, conhecida por suas contribuições à educação e à cultura. Nosso objetivo é proporcionar uma experiência educativa e imersiva, conectando visitantes com as tradições e histórias de Itarema.
+                </>
+              ) : (
+                <>
+                  O Museu Vicente de Paula Rios, localizado no coração de Itarema, é um espaço dedicado à preservação e divulgação da rica história e cultura local. Fundado em 1990, o museu abriga uma coleção diversificada que inclui artefatos indígenas, objetos históricos e exposições que retratam a evolução da cidade...{" "}
+                  <button
+                    onClick={() => setIsMuseumExpanded(true)}
+                    className="text-amber-300 hover:text-amber-200 underline"
+                  >
+                    Continuar Lendo
+                  </button>
+                </>
+              )}
+            </p>
+            {isMuseumExpanded && (
+              <button
+                onClick={() => setIsMuseumExpanded(false)}
+                className="text-amber-300 hover:text-amber-200 px-3 underline mb-4"
+              >
+                Recolher
+              </button>
+            )}
+            <a
+              href="https://www.guiadasartes.com.br/ceara/itarema/museu-vicente-de-paula-rios"
+              className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Saiba Mais sobre o Museu
             </a>
           </div>
         </div>
@@ -366,7 +443,6 @@ export function Home() {
         data-aos-delay="900"
       >
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* Navegação */}
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
             <Link to="/" className="hover:text-amber-300">
               Home
@@ -381,14 +457,10 @@ export function Home() {
               Apoie
             </Link>
           </div>
-
-          {/* Contatos */}
           <div className="text-center md:text-left">
             <p className="mb-2">Contato: museuitaa@itarema.gov.br</p>
             <p>Rua Principal, 123, Centro - Itarema, CE</p>
           </div>
-
-          {/* Redes Sociais */}
           <div className="flex space-x-4">
             <a
               href="https://www.itarema.ce.gov.br/"

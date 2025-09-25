@@ -5,23 +5,18 @@ import { Layout } from "./components/layout/layout";
 import { HistoriaIndigena } from "./culturaIndígena/historiaindigena";
 import { CulturaIndigena } from "./components/layout/culturaindigena";
 import { AcervoOnline } from "./museu/acervoonline";
-import { Arteindigena } from "./culturaIndígena/artindigena";
 import { Museu } from "./components/layout/museu";
 import { Tradicoes } from "./culturaIndígena/tradição";
 import { Horarios } from "./visite/horarios";
 import { Localizacao } from "./visite/localização";
 import { Visite } from "./components/layout/visite";
-import { Tickets } from "./visite/tickets";
-import { Boletins } from "./museu/boletins";
-import { Pesquisaref } from "./museu/pesquisarefe";
 import { Programação } from "./components/layout/programacao";
 import { ExAtual } from "./programacao/exatual";
 import { ExPassada } from "./programacao/expassada";
 import { ExFutura } from "./programacao/exfutura";
 import { Apoie } from "./components/layout/apoie";
 import { Doacao } from "./apoie/doacao";
-import { Parcerias } from "./apoie/parcerias";
-import { Voluntariado } from "./apoie/voluntariado";
+
 
 const router = createBrowserRouter([
 
@@ -39,7 +34,6 @@ const router = createBrowserRouter([
         children: [
           { path: "historiaindigena", element: <HistoriaIndigena /> },
           { path: "tradicao", element: <Tradicoes /> },
-          { path: "arteindigena", element: <Arteindigena /> },
         ]
       },
       {
@@ -47,8 +41,6 @@ const router = createBrowserRouter([
         element: <Museu />,
         children: [
           { path: "acervoonline", element: <AcervoOnline /> },
-          { path: "boletins", element: <Boletins /> },
-          { path: "pesquisaref", element: <Pesquisaref /> },
         ]
       },
     
@@ -66,8 +58,7 @@ const router = createBrowserRouter([
         element: <Apoie />,
         children: [
           { path: "doacao", element: <Doacao /> },
-          { path: "parcerias", element: <Parcerias /> },
-          { path: "voluntariado", element: <Voluntariado /> },  
+          
         ]
       
       },
@@ -79,8 +70,8 @@ const router = createBrowserRouter([
   children: [
     { path: "horarios", element: <Horarios /> },
     { path: "localizacao", element: <Localizacao />, },
-    { path: "tickets", element: <Tickets />},
-  ],
+  
+   ],
 },
      
     ]
