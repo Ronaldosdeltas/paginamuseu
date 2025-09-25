@@ -9,7 +9,15 @@ import Artefato2 from "/src/assets/images/Artefato2.png";
 import Artefato3 from "/src/assets/images/Artefato3.png";
 import Artefato4 from "/src/assets/images/Artefato4.png";
 import Artefato5 from "/src/assets/images/Artefato5.png"; 
+import Artefato6 from "/src/assets/images/Artefato6.png";
+import Artefato7 from "/src/assets/images/Artefato7.png";
+import Artefato8 from "/src/assets/images/Artefato8.png";
+import Artefato9 from "/src/assets/images/Artefato9.png";
+import Artefato10 from "/src/assets/images/Artefato10.png";
+import Artefato11 from "/src/assets/images/Artefato11.png";
+import Artefato12 from "/src/assets/images/Artefato12.png";
 import Itacover from "/src/assets/images/Itacover.jpg";
+
 
 
 // Tipos para os itens do acervo
@@ -20,7 +28,6 @@ interface AcervoItem {
   fullDescription: string; 
   image: any; 
   category: string; 
-  date: string; 
 }
 
 export function AcervoOnline() {
@@ -35,57 +42,105 @@ export function AcervoOnline() {
   }, []);
 
   const acervoItems: AcervoItem[] = [
-    {
-      id: 1,
-      title: "Pedra Cheirosa - Artefato Indígena",
-      description: "Réplica da lendária pedra que inspirou o nome de Itarema.",
-      fullDescription: "Descoberta em maré baixa, esta pedra simboliza as raízes tupi da cidade. Feita de basalto com inscrições antigas.",
-      image: Artefato1, 
-      category: "Artefatos",
-      date: "Pré-colombiano",
-    },
-    
-    {
-      id: 2,
-      title: "Documento de Fundação",
-      description: "Registro histórico da fundação de Itarema em 1930.",
-      fullDescription: "Assinado pelo prefeito local, este pergaminho detalha os primeiros assentamentos e tradições pesqueiras.",
-      image: Artefato2, 
-      category: "Documentos",
-      date: "1930",
-    },
-    {
-      id: 3,
-      title: "Pintura de Pescadores",
-      description: "Obra local retratando a vida cotidiana no litoral cearense.",
-      fullDescription: "Pintada por artista de Itarema, captura a essência da cultura pesqueira com cores vibrantes e detalhes autênticos.",
-      image: Artefato3, 
-      category: "Pinturas",
-      date: "Século XX",
-    },
-    
-    {
-      id: 4,
-      title: "Ferramentas Ancestrais",
-      description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
-      fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: Artefato4, // Adicione mais
-      category: "Artefatos",
-      date: "Século XVIII",
-    },
-     
-      {
-      id: 5,
-      title: "Ferramentas Ancestrais",
-      description: "Conjunto de ferramentas usadas pelos índios Tremembé.",
-      fullDescription: "Inclui redes de pesca e cerâmicas, preservando técnicas tradicionais de sobrevivência.",
-      image: Artefato5, // Adicione mais
-      category: "Artefatos",
-      date: "Século XVIII",
-    },
-    
-    
-  ];
+  {
+    id: 1,
+    title: "Talheres Indígenas",
+    description: "Conjunto de utensílios esculpidos à mão pelo povo Tremembé.",
+    fullDescription: "Utensílios produzidos em madeira leve e, em alguns casos, ossos de peixe, revelando técnicas de entalhe transmitidas por gerações. As peças apresentam marcas de uso cotidiano e ritual, associadas à partilha de alimentos e à vida comunitária no litoral.",
+    image: Artefato1,
+    category: "Artefatos",
+  },
+  {
+    id: 2,
+    title: "Vasilhas Cerimoniais",
+    description: "Vasilhas de barro usadas em rituais de partilha e oferenda.",
+    fullDescription: "Modeladas à mão e queimadas em fornos rudimentares, as vasilhas exibem engobos e grafismos inspirados na natureza costeira. Serviam para armazenar água, mingaus e tinturas durante celebrações comunitárias e momentos de passagem.",
+    image: Artefato2,
+    category: "Artefatos",
+  },
+  {
+    id: 3,
+    title: "Colares de Conchas e bolsas de palha",
+    description: "Adornos e bolsas trançadas com materiais do litoral cearense.",
+    fullDescription: "Colares montados com conchas recolhidas nas marés e fibras vegetais, combinando estética e significado simbólico. As bolsas, tecidas em palha de carnaúba, utilizam pontos tradicionais e acompanhavam o dia a dia em feiras, pesca e rituais.",
+    image: Artefato3,
+    category: "Artefatos",
+  },
+  {
+    id: 4,
+    title: "Potes de barro",
+    description: "Recipientes cerâmicos para armazenar água, grãos e temperos.",
+    fullDescription: "Potes moldados por roletes e alisados com seixos, com queima em fogueiras abertas para maior resistência. Versáteis e duráveis, eram usados no preparo de alimentos e na conservação, adequando-se ao clima quente do litoral.",
+    image: Artefato4,
+    category: "Artefatos",
+  },
+  {
+    id: 5,
+    title: "cabaças naturais e potes de barro",
+    description: "Conjunto que reúne cabaças secas e cerâmicas utilitárias.",
+    fullDescription: "As cabaças, ocas e polidas, funcionavam como cuias, frascos e até instrumentos sonoros; os potes, feitos com argila local, complementavam o conjunto doméstico. A combinação de materiais orgânicos e minerais revela soluções sustentáveis do cotidiano.",
+    image: Artefato5,
+    category: "Artefatos",
+  },
+  {
+    id: 6,
+    title: "Moedas Coloniais antigas",
+    description: "Coleção de moedas circulantes no período colonial brasileiro.",
+    fullDescription: "Estas moedas, cunhadas em metais como prata e cobre, testemunham a história econômica do Brasil Colônia. Marcadas com símbolos da Coroa Portuguesa, eram utilizadas em transações comerciais tanto nas cidades quanto no interior. Cada peça conta uma parte da narrativa da circulação monetária e da vida cotidiana nos séculos passados.",
+    image: Artefato6,
+    category: "Dinheiros antigos",
+  },
+  {
+    id: 7,
+    title: "Moedas e medalhas antigas",
+    description: "Conjunto diversificado de moedas históricas e medalhas comemorativas.",
+    fullDescription: "Este acervo reúne peças numismáticas de diferentes períodos, incluindo moedas que foram meio de troca e medalhas cunhadas para celebrar eventos importantes. As medalhas, muitas vezes em bronze ou prata, comemoram feitos históricos, personalidades ou acontecimentos culturais, enquanto as moedas refletem a economia de sua época.",
+    image: Artefato7,
+    category: "Dinheiros antigos",
+  },
+  {
+    id: 8,
+    title: "Instrumentos musicais antigos",
+    description: "Teclado e sanfona antigos que representam a evolução da música tradicional.",
+    fullDescription: "Este conjunto apresenta dois instrumentos emblemáticos: um teclado antigo, com teclas em marfim e ébano, que era utilizado em salões e igrejas para execução de música erudita; e uma sanfona (acordeão) tradicional, com seu fole característico e palhetas metálicas, instrumento fundamental na música popular e folclórica. Juntos, representam a diversidade musical entre a cultura urbana e rural dos séculos passados.",
+    image: Artefato8,
+    category: "Instrumentos e maquinas",
+  },
+  {
+    id: 9,
+    title: "Vitrola antiga",
+    description: "Aparelho de som mecânico para reprodução de discos de vinil.",
+    fullDescription: "Esta vitrola, com seu amplificador acústico característico e agulha de aço, era o centro de entretenimento doméstico no início do século XX. Operada manualmente com uma manivela, permitia que as famílias ouvissem músicas, discursos e gravações históricas através de seus discos de 78 RPM, representando uma revolução no acesso à cultura sonora.",
+    image: Artefato9,
+    category: "Instrumentos e maquinas",
+  },
+  {
+    id: 10,
+    title: "Impressora de datilografia e TV antigas",
+    description: "Conjunto de equipamentos tecnológicos pioneiros do século XX.",
+    fullDescription: "A impressora de datilografia, precursora das impressoras modernas, permitia a produção em série de documentos com qualidade tipográfica. Já a televisão antiga, com sua tela em preto e branco e válvulas a vácuo, trouxe pela primeira vez imagens em movimento para dentro dos lares, transformando radicalmente a comunicação e o entretenimento familiar.",
+    image: Artefato10,
+    category: "Instrumentos e maquinas",
+  },
+  {
+    id: 11,
+    title: "Máquina de escrever antiga",
+    description: "Instrumento mecânico para escrita datilográfica, predecessor do computador.",
+    fullDescription: "Com seu teclado mecânico característico e sistema de haste com tipos, a máquina de escrever padronizou a escrita comercial e literária por décadas. Cada tecla acionava uma alavanca que impressionava o papel através de uma fita entintada, criando documentos permanentes e legíveis que aceleraram a burocracia e a produção textual em escritórios e redações.",
+    image: Artefato11,
+    category: "Instrumentos e maquinas",
+  },
+  {
+    id: 12,
+    title: "Cédulas antigas",
+    description: "Papel-moeda histórico de diferentes períodos e valores.",
+    fullDescription: "Estas cédulas, impressas com técnicas de segurança primitivas como marcas d'água e relevos, representam momentos cruciais da história financeira nacional. Desde os primeiros mil-réis até as modernizações do cruzeiro, cada nota carrega elementos artísticos de sua época, retratando figuras históricas, alegorias patrióticas e símbolos do desenvolvimento econômico do país.",
+    image: Artefato12,
+    category: "Dinheiros antigos",
+  },
+  
+  
+];
 
   const [selectedItem, setSelectedItem] = useState<AcervoItem | null>(null); // Para o modal
   const [filterCategory, setFilterCategory] = useState<string>("Todas"); // Filtro
@@ -123,7 +178,7 @@ export function AcervoOnline() {
       <div className="max-w-6xl mx-auto mt-10 px-5" data-aos="fade-up" data-aos-delay="100">
         <h2 className="text-3xl font-medium text-gray-800 text-center mb-8">Navegue pelo Acervo</h2>
         <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {["Todas", "Artefatos", "Documentos", "Pinturas"].map((cat) => (
+          {["Todas", "Artefatos", "Dinheiros antigos", "Instrumentos e maquinas"].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilterCategory(cat)}
@@ -161,7 +216,7 @@ export function AcervoOnline() {
               </div>
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
-                <p className="text-gray-600 mb-2 text-sm">{item.category} - {item.date}</p>
+                <p className="text-gray-600 mb-2 text-sm">{item.category}</p>
                 <button
                   onClick={() => setSelectedItem(item)}
                   className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-500 transition"
@@ -185,7 +240,7 @@ export function AcervoOnline() {
             <img src={selectedItem.image} alt={selectedItem.title} className="w-full h-64 object-cover rounded-lg mb-4" />
             <h2 className="text-2xl font-bold mb-4">{selectedItem.title}</h2>
             <p className="text-gray-700 mb-4">{selectedItem.fullDescription}</p>
-            <p className="text-sm text-gray-500 mb-4">Categoria: {selectedItem.category} | Data: {selectedItem.date}</p>
+            <p className="text-sm text-gray-500 mb-4">Categoria: {selectedItem.category}</p>
             <button
               onClick={closeModal}
               className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-500 transition"
