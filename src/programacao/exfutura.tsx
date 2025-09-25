@@ -2,8 +2,8 @@
 import { Link } from "react-router-dom";
 export function ExFutura() {
   return (
-    <div className="flex flex-col w-full items-center justify-center min-h-screen bg-gray-200">
-    <div className="flex flex-col max-w-6xl items-center justify-center px-4 bg-sky-400 rounded-b-lg shadow-lg overflow-hidden-">
+    <div className="flex flex-col w-full items-center mt-10 justify-center min-h-screen bg-gray-200">
+    <div className="flex flex-col max-w-6xl items-center mt-10 justify-center px-4 bg-sky-400 rounded-b-lg shadow-lg overflow-hidden-">
       <h1 className="font-medium text-4xl mt-10 text-center mb-10 text-gray-800"
       >Eventos Futuros Serão disponibilizados em breve!</h1>
         </div>
