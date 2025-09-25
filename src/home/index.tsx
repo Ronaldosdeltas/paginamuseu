@@ -190,7 +190,7 @@ export function Home() {
                 de Itarema. Fique atento às datas e participe!
               </p>
               <Link
-                to="/exposicoes/eventos"
+                to="/programacao/eventos"
                 className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition"
               >
                 Ver Eventos
