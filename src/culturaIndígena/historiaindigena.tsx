@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import tremembe from "/src/assets/images/Tremembe.jpg";
+import tremembe from "/src/assets/images/tremembe.jpg";
 import Itacover from "/src/assets/images/Itacover.jpg";
 
 export function HistoriaIndigena() {
