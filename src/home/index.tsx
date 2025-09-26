@@ -90,7 +90,7 @@ export function Home() {
       </div>
 
       {/* Carrossel */}
-      <div className="w-full bg-gray-200 flex justify-center items-center mt-3 rounded-lg shadow-lg">
+      <div className="w-full bg-gray-200 flex justify-center items-center  rounded-lg shadow-lg">
         <div
           className="max-w-100 mx-auto mt-20 relative z-10"
           data-aos="fade-up"
@@ -429,9 +429,9 @@ export function Home() {
             to="https://www.google.com/maps/place/Centro+Hist%C3%B3rico+e+Cultura+Museu+Vicente+de+Paula+Rios/@-2.9213997,-39.9164549,17z/data=!4m6!3m5!1s0x7c1ffbe3035b6f5:0x9fd0b9522cd9a977!8m2!3d-2.92141!4d-39.9138454!16s%2Fg%2F11krkw1g6_?authuser=0&entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-green-600 text-white mb-5 px-4 py-2 rounded-lg hover:bg-green-500 transition mt-4"
+            className="inline-block bg-blue-600 text-white mb-5 px-4 py-2 rounded-lg hover:bg-blue-500 transition mt-4"
           >
-            Mais Informações
+            Abrir no Google Maps
           </Link>
         </div>
       </div>
