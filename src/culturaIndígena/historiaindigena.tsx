@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import tremembe from "/src/assets/images/Tremembe.jpg";
 import Itacover from "/src/assets/images/Itacover.jpg";
-import itaord from "/src/assets/images/itaord.png";
 
 export function HistoriaIndigena() {
   // Inicializar AOS
@@ -22,19 +22,19 @@ export function HistoriaIndigena() {
       id: 1,
       title: "Cerâmica Tremembé",
       description: "Vasos cerimoniais usados em rituais indígenas.",
-      image: Itacover, 
+      image: tremembe, 
     },
     {
       id: 2,
       title: "Ferramentas de Pesca",
       description: "Redes e arpões dos povos Tremembé.",
-      image: itaord, 
+      image: tremembe, 
     },
     {
       id: 3,
       title: "Ornamentos Sagrados",
       description: "Colares e pulseiras com conchas e pedras.",
-      image: Itacover,
+      image: tremembe,
     },
   ];
 
@@ -90,8 +90,8 @@ export function HistoriaIndigena() {
                   alt={item.title}
                   className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 flex items-end">
-                  <p className="text-white p-4 opacity-0 hover:opacity-100 transition-opacity">{item.description}</p>
+                <div className="absolute inset-0 hover:bg-opacity-20 transition-opacity duration-300 flex items-end">
+                  <p className="text-amber-300 p-4 opacity-0 hover:opacity-100 bg-amber-50 transition-opacity">{item.description}</p>
                 </div>
               </div>
               <div className="p-4">

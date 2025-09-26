@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Itacover from "/src/assets/images/Itacover.jpg";
-import itaord from "/src/assets/images/itaord.png";
 
 export function Tradicoes() {
   // Inicializar AOS
@@ -22,22 +21,22 @@ export function Tradicoes() {
       id: 1,
       title: "Festival da Cultura",
       description: "Evento anual com danças, música e culinária típica de Itarema.",
-      image: itaord, // Substitua pela sua imagem
+      image: Itacover, // Substitua pela sua imagem
       link: "https://www.instagram.com/itaremaordinariaof/reels/",
     },
     {
       id: 2,
       title: "Culinária Pesqueira",
-      description: "Pratos tradicionais à base de peixes e frutos do mar.",
+      description: "Coleta de búzios mariscos.",
       image: Itacover, // Substitua pela sua imagem
-      link: "/eventos/culinaria",
+      link: "https://www.youtube.com/watch?v=XB4BS4Uzpaw",
     },
     {
       id: 3,
-      title: "Lenda da Pedra Cheirosa",
-      description: "A história mítica que deu origem ao nome de Itarema.",
+      title: "Histórias de Itarema",
+      description: "Vozes e ventos Historias de Itarema.",
       image: Itacover, // Substitua pela sua imagem
-      link: "/historia/pedra-cheirosa",
+      link: "https://www.youtube.com/watch?v=es3Tt_uEa4o",
     },
   ];
 
@@ -45,7 +44,7 @@ export function Tradicoes() {
     <div className="flex flex-col w-full items-center justify-center min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="w-full mt-20 justify-center flex rounded-lg shadow-lg overflow-hidden relative" data-aos="fade-up">
-        <img src={itaord} alt="Tradições de Itarema" className="w-full h-64 object-cover" />
+        <img src={Itacover} alt="Tradições de Itarema" className="w-full h-64 object-cover" />
         <div className="absolute inset-0 flex items-center justify-center bg-slate-700 text-white bg-opacity-40">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-4">Tradições de Itarema</h1>
@@ -95,8 +94,8 @@ export function Tradicoes() {
                   alt={item.title}
                   className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 flex items-end">
-                  <p className="text-white p-4 opacity-0 hover:opacity-100 transition-opacity">{item.description}</p>
+                <div className="absolute inset-0 hover:bg-opacity-20 transition-opacity duration-300 flex items-end">
+                  <p className="text-gray-500 bg-white p-4 opacity-0 hover:opacity-100 transition-opacity">{item.description}</p>
                 </div>
               </div>
               <div className="p-4">
