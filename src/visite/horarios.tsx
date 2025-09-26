@@ -351,13 +351,13 @@ export function Horarios() {
             <Link to="/" className="hover:text-amber-300">
               Home
             </Link>
-            <Link to="/programacao" className="hover:text-amber-300">
+            <Link to="/programacao/eventos" className="hover:text-amber-300">
               Programação
             </Link>
-            <Link to="/visite" className="hover:text-amber-300">
+            <Link to="/visite/horarios" className="hover:text-amber-300">
               Visite
             </Link>
-            <Link to="/apoie" className="hover:text-amber-300">
+            <Link to="/apoie/doacao" className="hover:text-amber-300">
               Apoie
             </Link>
           </div>

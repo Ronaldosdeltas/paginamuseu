@@ -447,15 +447,10 @@ export function Home() {
             <Link to="/" className="hover:text-amber-300">
               Home
             </Link>
-            <Link to="/programacao" className="hover:text-amber-300">
-              Programação
-            </Link>
-            <Link to="/visite" className="hover:text-amber-300">
-              Visite
-            </Link>
-            <Link to="/apoie" className="hover:text-amber-300">
-              Apoie
-            </Link>
+          <Link to="/programacao/eventos" className="hover:text-amber-300">Programação</Link>
+            <Link to="/visite/horarios" className="hover:text-amber-300">Visite</Link>
+            <Link to="/apoie/doacao" className="hover:text-amber-300">Apoie</Link>
+            <Link to="/museu/acervoonline" className="hover:text-amber-300">Acervo Online</Link>
           </div>
           <div className="text-center md:text-left">
             <p className="mb-2">Contato: museuitaa@itarema.gov.br</p>
