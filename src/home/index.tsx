@@ -10,6 +10,7 @@ import sportIta from "/src/assets/images/sportIta.jpg";
 import itachitão from "/src/assets/images/itachitão.jpeg";
 import paroquiaitarema from "/src/assets/images/paroquiaitarema.avif";
 import IgrejaAlmofala from "/src/assets/images/IgrejaAlmofala.jpg";
+import {toast} from "react-hot-toast";  
 
 export function Home() {
   // Inicializar AOS
@@ -52,6 +53,7 @@ export function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuseumExpanded, setIsMuseumExpanded] = useState(false);
   const [isHistoryExpanded, setIsHistoryExpanded] = useState(false); // Novo estado para a história
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,6 +75,18 @@ export function Home() {
       prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
     );
   };
+  function notify() {
+    toast.success('Obrigado por se inscrever na nossa newsletter!', {
+      position: 'top-center',
+      style: {
+        borderRadius: '10px',
+        background: '#333',
+        color: '#fff',
+      },
+    });
+    setEmail("");
+  }
+
 
   return (
     <div className="flex flex-col w-full items-center justify-center">
@@ -392,10 +406,16 @@ export function Home() {
               type="email"
               placeholder="Digite seu e-mail"
               className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <button
               type="submit"
               className="bg-green-600 text-white px-5 py-3 rounded-lg hover:bg-green-500 transition"
+              onClick= {(e) => {
+                e.preventDefault();
+                notify();
+              }} 
             >
               Inscrever-se
             </button>

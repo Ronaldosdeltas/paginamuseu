@@ -25,6 +25,7 @@ export function Doacao() {
 
   // Manipulador para o formulário de contato
   const handleContato = () => {
+
     const { nome, email, mensagem } = formData;
     if (!nome || !email || !mensagem) {
       setFormMessage("Por favor, preencha todos os campos.");
@@ -41,6 +42,8 @@ export function Doacao() {
     setCopied(true);
     setTimeout(() => setCopied(false), 3000); // Reseta após 3 segundos
   };
+
+
 
   return (
     <div className="flex flex-col w-full items-center justify-center">
@@ -197,7 +200,7 @@ export function Doacao() {
             </div>
             <div className="text-center mt-6">
               <button
-                onClick={handleContato}
+                onClick={handleContato }
                 className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-500 transition"
               >
                 Enviar Mensagem
